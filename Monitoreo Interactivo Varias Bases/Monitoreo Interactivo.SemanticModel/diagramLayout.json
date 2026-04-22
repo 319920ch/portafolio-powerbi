@@ -1,0 +1,166 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 32,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 258.59676776524606
+          },
+          "nodeIndex": "repo bddsize",
+          "nodeLineageTag": "80be2c70-abf6-4d72-b83f-b663ffdf243e",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "repo disco",
+          "nodeLineageTag": "d7d85292-33a0-4813-af6d-8e009d257ff1",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 326.979139424201,
+            "y": 0
+          },
+          "nodeIndex": "repo rman",
+          "nodeLineageTag": "934a76d0-ae0d-41fb-8ac3-dba23e164465",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 673.22833004178619,
+            "y": 413.08531518155087
+          },
+          "nodeIndex": "repo servidor",
+          "nodeLineageTag": "5c370da6-6ced-417a-b76a-ee3a13bebe61",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1315.7402133129906,
+            "y": 0
+          },
+          "nodeIndex": "repo tiendas",
+          "nodeLineageTag": "8d10f0ce-201d-420c-ad7a-9a9af1f25912",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 4,
+            "y": 460
+          },
+          "nodeIndex": "repo tablespaces",
+          "nodeLineageTag": "969773a5-5f0d-4984-b9a8-70daee1d1c23",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 983.74021331299059,
+            "y": 231
+          },
+          "nodeIndex": "repo uptime_bdd_current",
+          "nodeLineageTag": "9749d8b6-80f5-49f1-b822-cad7db9ca98d",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 987.74021331299059,
+            "y": 470.33228058754275
+          },
+          "nodeIndex": "repo uptime_bdd_events",
+          "nodeLineageTag": "3825a2a3-6a11-4014-afd6-71e2dc541b3e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 625.74021331299059,
+            "y": 0
+          },
+          "nodeIndex": "public vw_rman_intervalos",
+          "nodeLineageTag": "47053336-8632-4a86-a041-d96c1011f1d5",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1283.7402133129906,
+            "y": 243.33228058754275
+          },
+          "nodeIndex": "repo uptime_bdd_awr",
+          "nodeLineageTag": "efb5c25e-6693-474d-8ecb-99375e86df0f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 331.74021331299059,
+            "y": 577.16614029377138
+          },
+          "nodeIndex": "Calendario1",
+          "nodeLineageTag": "f2b44b05-2316-4eda-a6a0-dc09463e93e2",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

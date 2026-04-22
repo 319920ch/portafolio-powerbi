@@ -1,0 +1,79 @@
+table 'repo uptime_bdd_current'
+	lineageTag: 9749d8b6-80f5-49f1-b822-cad7db9ca98d
+
+	column ip
+		dataType: string
+		lineageTag: 6e3b4875-b79c-47b5-8bee-7fbcb0903cb8
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		lineageTag: 87ee56d0-37fb-42f9-9a88-fc2d82ba75ed
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column arriba
+		dataType: int64
+		formatString: 0
+		lineageTag: 08825cdd-f68c-421b-805a-5179e10212c9
+		summarizeBy: sum
+		sourceColumn: arriba
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_check
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 71a24a0a-8259-461f-8fde-a1e8807a6f81
+		summarizeBy: none
+		sourceColumn: last_check
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_change
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 933ddce8-0052-483b-9333-42017a3ea336
+		summarizeBy: none
+		sourceColumn: last_change
+
+		annotation SummarizationSetBy = Automatic
+
+	column startup_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dca28850-a415-4efc-b287-087aae924b6d
+		summarizeBy: none
+		sourceColumn: startup_time
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Etiqueta de texto que indica el estado actual de la base de datos: 'UP' si arriba=1, 'DOWN' si arriba=0. Usada en visualizaciones de estado actual.
+	column Actual = ```
+			
+			IF('repo uptime_bdd_current'[arriba] = 1, "Arriba", "Abajo")
+			
+			```
+		lineageTag: fef16724-62fd-41e3-914a-9280a4f27e18
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo uptime_bdd_current' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_uptime_bdd_current = Origen{[Schema="repo",Item="uptime_bdd_current"]}[Data]
+				in
+				    repo_uptime_bdd_current
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

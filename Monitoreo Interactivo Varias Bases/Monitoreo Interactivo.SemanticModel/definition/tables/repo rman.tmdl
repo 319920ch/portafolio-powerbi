@@ -1,0 +1,556 @@
+table 'repo rman'
+	lineageTag: 934a76d0-ae0d-41fb-8ac3-dba23e164465
+
+	/// Cuenta los días distintos con al menos un respaldo registrado en el contexto actual. No filtra por mes explícitamente, depende del filtro aplicado desde el calendario o segmentador.
+	measure DiasDistintosMes =
+			
+			DISTINCTCOUNT('repo rman'[fechainicio])
+		formatString: 0
+		lineageTag: 35cda5a7-cdf8-4d37-bf93-e9280c351774
+
+	/// Cuenta los días del calendario en los que no se registró ningún respaldo (Respaldos por Día = 0). Usa Calendario1 como base, garantizando que se consideren todos los días del período aunque no tengan datos en repo rman.
+	measure 'Dias Faltantes' = ```
+			
+			CALCULATE (
+			    COUNTROWS ( Calendario1 ),
+			    FILTER (
+			        VALUES ( Calendario1[Fecha] ),
+			        [Respaldos por Día] = 0
+			    )
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 2187edc3-7d0e-44b7-9ca6-192cbf5728f4
+
+	/// Retorna el número esperado de respaldos semanales (4) para el servidor 192.168.2.55/32. Valor fijo usado como referencia en visualizaciones de cumplimiento de respaldos de ese servidor específico.
+	measure Respaldos255 = ```
+			IF( SELECTEDVALUE('repo rman'[ip]) = "192.168.2.55/32", 4 )
+			
+			
+			```
+		formatString: 0
+		lineageTag: 8423d55a-ea6e-48aa-9cc6-186453d7ee1e
+
+	/// Cuenta los días distintos que tuvieron al menos un respaldo COMPLETED, independientemente de si también tuvieron fallas. Indicador de cobertura de respaldos exitosos.
+	measure Total_Dias_Completed = ```
+			
+			VAR Dias =
+			    ADDCOLUMNS(
+			        SUMMARIZE(
+			            'repo rman',
+			            'repo rman'[fechainicio]
+			        ),
+			        "TieneCompleted",
+			            CALCULATE(
+			                COUNTROWS('repo rman'),
+			                'repo rman'[completado] = "COMPLETED"
+			            )
+			    )
+			RETURN
+			COUNTROWS(
+			    FILTER(Dias, [TieneCompleted] > 0)
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 703f1bde-da0f-4785-b2a4-1075eacf4be2
+
+	/// Cuenta los días que solo tuvieron respaldos FAILED, sin ningún COMPLETED. Indicador de días con falla total de respaldo.
+	measure Total_Dias_Failed = ```
+			
+			VAR Dias =
+			    ADDCOLUMNS(
+			        SUMMARIZE(
+			            'repo rman',
+			            'repo rman'[fechainicio]
+			        ),
+			        "TieneCompleted",
+			            CALCULATE(
+			                COUNTROWS('repo rman'),
+			                'repo rman'[completado] = "COMPLETED"
+			            ),
+			        "TieneFailed",
+			            CALCULATE(
+			                COUNTROWS('repo rman'),
+			                'repo rman'[completado] = "FAILED"
+			            )
+			    )
+			RETURN
+			COUNTROWS(
+			    FILTER(
+			        Dias,
+			        [TieneCompleted] = 0 &&
+			        [TieneFailed] > 0
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 697ef681-7b64-4847-9ffe-30b76975608c
+
+	/// Cuenta los días distintos con respaldo FAILED (sin ningún COMPLETED) para el servidor 192.168.2.55/32. Usado en visuals de seguimiento de fallas de respaldo de ese servidor.
+	measure Respaldos255F = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('repo rman'[fechainicio]),
+			    'repo rman'[ip] = "192.168.2.55/32",
+			    'repo rman'[completado] = "FAILED"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 7c80b1ed-317a-4f3a-84b6-210525f09fc2
+
+	/// Promedio del tiempo de ejecución de respaldos en minutos (columna TiempoMinutos). Usado como estimación del tiempo de recuperación en cálculos de RTO.
+	measure 'Tiempo Estimado Recuperacion (min)' = ```
+			
+			AVERAGE('repo rman'[TiempoMinutos])
+			
+			```
+		lineageTag: 6a3704a2-e922-4b9b-90f2-d91b8059102b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tamaño promedio de los respaldos en GB (columna tamanoGB). Refleja el tamaño típico por ejecución en el período filtrado.
+	measure 'Tamano Respaldo (GB)' = ```
+			
+			AVERAGE('repo rman'[tamanoGB])
+			
+			```
+		lineageTag: b469fd0a-ccaf-4192-9d74-42e479235dbf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Velocidad promedio de respaldo calculada por ejecución (AVERAGEX de tamanoGB / TiempoMinutos). Refleja la velocidad típica por trabajo individual de respaldo.
+	measure 'Velocidad Backup (GB/min)' = ```
+			
+			AVERAGEX(
+			    'repo rman',
+			    DIVIDE('repo rman'[tamanoGB], 'repo rman'[TiempoMinutos])
+			)
+			
+			```
+		lineageTag: 0e640784-612a-4327-a998-4af349db67c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Calcula las horas transcurridas entre el respaldo COMPLETED actual y el anterior de la misma base. Retorna BLANK si el respaldo no es COMPLETED. Usado para analizar la frecuencia real entre respaldos exitosos.
+	measure HorasRespaldos = ```
+			
+			VAR FechaActual =
+			    MAX('repo rman'[fechainicio])
+			VAR FechaAnterior =
+			    CALCULATE(
+			        MAX('repo rman'[fechainicio]),
+			        FILTER(
+			            ALL('repo rman'),
+			            'repo rman'[fechainicio] < FechaActual &&
+			            'repo rman'[completado] = "COMPLETED"
+			        )
+			    )
+			RETURN
+			IF(
+			    SELECTEDVALUE('repo rman'[completado]) <> "COMPLETED",
+			    BLANK(),
+			    DIVIDE(
+			        DATEDIFF(FechaAnterior, FechaActual, MINUTE),
+			        60
+			    )
+			)
+			
+			```
+		lineageTag: 7642bb0c-177e-4761-803e-4ed759249fbe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Cuenta los días distintos con respaldo COMPLETED para el servidor 192.168.2.55/32. Usado en visuals de seguimiento de cumplimiento de respaldos de ese servidor.
+	measure Respaldos255C = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('repo rman'[fechainicio]),
+			    'repo rman'[ip] = "192.168.2.55/32",
+			    'repo rman'[completado] = "COMPLETED"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1b127f00-291a-4e49-b263-857b7b25a629
+
+	/// Cuenta las semanas distintas (año + número de semana) que tienen al menos un respaldo registrado. Complementa TotalSemanasRango255 para calcular SemanasFaltantes.
+	measure SemanasConDatos = ```
+			
+			COUNTROWS (
+			    SUMMARIZE (
+			        ADDCOLUMNS (
+			            'repo rman',
+			            "Anio",   YEAR ( 'repo rman'[fechainicio] ),
+			            "Semana", WEEKNUM ( 'repo rman'[fechainicio], 1 )
+			        ),
+			        [Anio],
+			        [Semana]
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: a2ba8ed8-c50c-4faa-b2fb-cf951e690c45
+
+	/// Diferencia entre el total de semanas del rango (TotalSemanasRango255, contando domingos) y las semanas con datos reales. Indica semanas sin ningún respaldo registrado.
+	measure SemanasFaltantes = ```
+			
+			[TotalSemanasRango255] - [SemanasConDatos]
+			
+			```
+		formatString: 0
+		lineageTag: f8e13475-deee-4fce-92ac-79656ad35047
+
+	/// Cuenta los días distintos con al menos un respaldo de tipo FULL_BASE en el mes. Si es mayor a 0, la base de datos es recuperable. Base de Estado_Recuperacion y RTO_mes_s.
+	measure Tiene_FULL = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT( 'repo rman'[fechainicio]),
+			    'repo rman'[TipoBackup_Mensual]= "FULL_BASE"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: dddf7fc6-6c89-4ff7-ba80-7c9c0b0aad46
+
+	/// Etiqueta de recuperabilidad: '🟢 Recuperable' si existe al menos un FULL_BASE en el período, '🔴 No recuperable (solo INCR)' si solo hay incrementales. Basada en Tiene_FULL.
+	measure Estado_Recuperacion = ```
+			
+			SWITCH(
+			    TRUE(),
+			    [Tiene_FULL] > 0, "🟢 Recuperable",
+			    "🔴 No recuperable (solo INCR)"
+			)
+			
+			```
+		lineageTag: 3bb15421-7012-4d5b-9c0f-7df4bdd8874a
+
+	/// Tiempo estimado de restauración del backup FULL_BASE en minutos, calculado como tamaño máximo del FULL dividido entre Velocidad_RTO. Componente del cálculo de RTO_mes_s.
+	measure Restore_FULL_s = ```
+			
+			CALCULATE(
+			    DIVIDE(
+			        MAX( 'repo rman'[tamanoGB]),
+			        [Velocidad_RTO (GB/min)]
+			    ),
+			    'repo rman'[TipoBackup_Mensual] = "FULL_BASE"
+			)
+			
+			
+			```
+		lineageTag: e54066a0-41c8-44c1-8b90-c7f1d065884c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tiempo estimado de restauración de los backups INCREMENTALES en minutos, calculado como suma total de tamaños INCREMENTAL dividida entre Velocidad_RTO. Componente del cálculo de RTO_mes_s.
+	measure Restore_INC_s = ```
+			
+			CALCULATE(
+			    DIVIDE(
+			        SUM( 'repo rman'[tamanoGB] ),
+			        [Velocidad_RTO (GB/min)]
+			    ),
+			    'repo rman'[TipoBackup_Mensual] = "INCREMENTAL"
+			)
+			
+			```
+		lineageTag: 375c97f9-0d7b-4b46-842d-ea6a84b2b767
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tiempo total estimado de recuperación (RTO) en minutos: Restore_FULL_s + Restore_INC_s + 5 minutos de overhead operativo. Retorna BLANK si no hay FULL_BASE disponible.
+	measure RTO_mes_s = ```
+			
+			IF(
+			    [Tiene_FULL] = 0,
+			    BLANK(),
+			    [Restore_FULL_s] +
+			    [Restore_INC_s] +
+			    5
+			)
+			
+			```
+		lineageTag: 7bc13f07-264a-43fc-9ffc-6f99e2601908
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Formatea RTO_mes_s en texto HH:MM:SS para visualización. Representa el tiempo total de recuperación (FULL + INCREMENTAL + overhead). Retorna BLANK si no hay FULL_BASE.
+	measure RTO_formato = ```
+			
+			VAR totalMin = [RTO_mes_s]
+			VAR totalSec = INT( totalMin * 60 )
+			
+			VAR horas =
+			    INT( totalSec / 3600 )
+			
+			VAR minutos =
+			    INT( MOD( totalSec, 3600 ) / 60 )
+			
+			VAR segundos =
+			    MOD( totalSec, 60 )
+			
+			RETURN
+			IF(
+			    ISBLANK( totalMin ),
+			    BLANK(),
+			    FORMAT(horas, "0") & ":" &
+			    FORMAT(minutos, "00") & ":" &
+			    FORMAT(segundos, "00")
+			)
+			
+			
+			```
+		lineageTag: 232de3a3-e872-4ff4-b186-b2d105c9c82e
+
+	/// Velocidad agregada de respaldo calculada como SUM(tamanoGB) / SUM(TiempoMinutos). Usada como base para estimar los tiempos de restauración en Restore_FULL_s y Restore_INC_s.
+	measure 'Velocidad_RTO (GB/min)' = ```
+			
+			DIVIDE(
+			    SUM( 'repo rman'[tamanoGB] ),
+			    SUM( 'repo rman'[TiempoMinutos] )
+			)
+			
+			```
+		lineageTag: 579cfd12-e00b-4283-ac2d-de7a43a3511a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Formatea Restore_INC_s en texto HH:MM:SS para visualización. Muestra solo el tiempo estimado de restaurar los backups incrementales, sin incluir el FULL ni el overhead.
+	measure RTO2_formato = ```
+			
+			VAR totalMin = [Restore_INC_s]
+			VAR totalSec = INT( totalMin * 60 )
+			
+			VAR horas =
+			    INT( totalSec / 3600 )
+			
+			VAR minutos =
+			    INT( MOD( totalSec, 3600 ) / 60 )
+			
+			VAR segundos =
+			    MOD( totalSec, 60 )
+			
+			RETURN
+			IF(
+			    ISBLANK( totalMin ),
+			    BLANK(),
+			    FORMAT(horas, "0") & ":" &
+			    FORMAT(minutos, "00") & ":" &
+			    FORMAT(segundos, "00")
+			)
+			
+			```
+		lineageTag: 25a257a8-953e-4469-85cc-c9577c641107
+
+	/// Cuenta los respaldos registrados para un día específico de Calendario1, eliminando el filtro del calendario y cruzando por la columna FechaC de repo rman. Retorna 0 si no hay respaldos ese día. Base de Día sin Respaldo y Días Faltantes DSR.
+	measure 'Respaldos por Día' = ```
+			
+			VAR DiaActual =
+			    SELECTEDVALUE ( Calendario1[Fecha] )
+			VAR Conteo =
+			    CALCULATE (
+			        COUNTROWS ( 'repo rman' ),
+			        REMOVEFILTERS ( Calendario1 ),
+			        'repo rman'[FechaC] = DiaActual
+			    )
+			RETURN
+			COALESCE ( Conteo, 0 )
+			
+			
+			
+			```
+		formatString: 0
+		lineageTag: ad2f15b9-6eab-4740-b282-d8adeddc51df
+
+	/// Indicador (1/0) que marca si un día no tuvo ningún respaldo (Respaldos por Día = 0). Usado por Días Faltantes DSR para acumular el total de días sin respaldo.
+	measure 'Día sin Respaldo' = ```
+			
+			IF (
+			    [Respaldos por Día] = 0,
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 1c3e75ad-b2f6-441f-8bcc-16985e787875
+
+	/// Suma los días sin respaldo en el rango del calendario usando SUMX sobre Calendario1[Fecha]. Enfoque alternativo a Dias Faltantes, basado en el indicador Día sin Respaldo en lugar de filtrar directamente por conteo cero.
+	measure 'Días Faltantes DSR' = ```
+			
+			SUMX (
+			    VALUES ( Calendario1[Fecha] ),
+			    [Día sin Respaldo]
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 2540054f-1bb4-4d95-8748-4d67156d5f7f
+
+	/// Cuenta los domingos del calendario en el período filtrado usando Calendario1[EsDomingo]=1. Representa el total de semanas completas del rango, base para calcular SemanasFaltantes.
+	measure TotalSemanasRango255 = ```
+			
+			CALCULATE (
+			    COUNTROWS ( Calendario1 ),
+			    Calendario1[EsDomingo] = 1
+			)
+			
+			```
+		formatString: 0
+		lineageTag: ae8b6fd3-34a3-4e15-9750-eb2d10d08582
+
+	column ip
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 5933fcb6-5338-4ecc-8775-584b595b5841
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: be1e277b-bac3-4ae4-b5c4-c70562304427
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamanomb
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: df4add22-8b67-418b-9a81-b19e4d42a7b4
+		summarizeBy: none
+		sourceColumn: tamanomb
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column completado
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 51647592-ad23-474c-bbc6-b8baa36cc5b7
+		summarizeBy: none
+		sourceColumn: completado
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechainicio
+		dataType: dateTime
+		formatString: d/m/yyyy
+		sourceProviderType: datetime2
+		lineageTag: 5d0a916e-05f0-43a8-9931-ec2f08c277f7
+		summarizeBy: none
+		sourceColumn: fechainicio
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column tiempoejecucion
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: c265f99f-5d97-484d-a9e0-3af967ab1a9d
+		summarizeBy: none
+		sourceColumn: tiempoejecucion
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tiporman
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 028776c2-dd90-43ff-8eac-c472bf7d703d
+		summarizeBy: none
+		sourceColumn: tiporman
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tiempo de ejecución del respaldo convertido a minutos desde tiempoejecucion. Base para cálculos de velocidad y RTO.
+	column TiempoMinutos = 'repo rman'[tiempoejecucion]/60
+		lineageTag: 8cf0008e-4f3c-42c6-ae82-939fa8f9b3f5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tamaño del respaldo convertido a Gigabytes desde tamanomb (Megabytes). Usado en medidas de velocidad y RTO.
+	column tamanoGB = 'repo rman'[tamanomb]/1024
+		lineageTag: da45c1fe-eb27-481f-b5a5-d62a6d878e06
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Clasificación del tipo de respaldo para el cálculo de RTO mensual: 'FULL_BASE' para el primer FULL del mes, 'INCREMENTAL' para los demás. Determina la estrategia de recuperación.
+	column TipoBackup_Mensual = ```
+			
+			VAR maxMes =
+			    CALCULATE(
+			        MAX('repo rman'[tamanoGB]),
+			        ALLEXCEPT(
+			            'repo rman',
+			            'repo rman'[sid],
+			            'repo rman'[AnioMes]
+			        )
+			    )
+			RETURN
+			IF(
+			    'repo rman'[tamanoGB] >= maxMes * 0.7,
+			    "FULL_BASE",
+			    "INCREMENTAL"
+			)
+			
+			
+			```
+		lineageTag: d3744eab-e4ed-472d-a49e-048c3fd5daf6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave numérica de año-mes en formato AAAAMM derivada de fechainicio. Usada para agrupaciones y comparaciones mensuales.
+	column AnioMes = ```
+			
+			YEAR('repo rman'[fechainicio]) * 100
+			+ MONTH('repo rman'[fechainicio])
+			
+			```
+		formatString: 0
+		lineageTag: 2af90e91-b474-4c19-af6e-88301de17093
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha truncada al día (sin hora) derivada de fechainicio. Usada para relacionar con Calendario1[Fecha] en medidas como Respaldos por Día.
+	column FechaC = DATEVALUE('repo rman'[fechainicio])
+		formatString: General Date
+		lineageTag: b3129de5-8d11-44aa-b5c7-553d82d6f412
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo rman' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_rman = Source{[Schema="repo",Item="rman"]}[Data]
+				in
+				    repo_rman
+
+	annotation PBI_ResultType = Exception
+

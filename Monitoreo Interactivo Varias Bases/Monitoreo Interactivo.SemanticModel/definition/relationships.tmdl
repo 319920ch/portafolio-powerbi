@@ -1,0 +1,52 @@
+relationship 06808eea-307e-4c57-98e8-57a98602a5b8
+	fromColumn: 'repo bddsize'.ip
+	toColumn: 'repo servidor'.ip
+
+	annotation PBI_IsFromSource = FS
+
+relationship 008fbeee-3968-45ca-838c-0936384a3221
+	fromColumn: 'repo disco'.ip
+	toColumn: 'repo servidor'.ip
+
+	annotation PBI_IsFromSource = FS
+
+relationship fe26648d-9da9-41e9-9750-70bedf07106e
+	fromColumn: 'repo rman'.ip
+	toColumn: 'repo servidor'.ip
+
+	annotation PBI_IsFromSource = FS
+
+relationship 7646e286-257e-4e74-b8b7-5ca450bf37ae
+	fromColumn: 'repo tablespaces'.ip
+	toColumn: 'repo servidor'.ip
+
+	annotation PBI_IsFromSource = FS
+
+relationship 9ca8bde6-79a0-d9e0-0395-7b53d7ecd414
+	fromColumn: 'repo uptime_bdd_current'.ip
+	toColumn: 'repo servidor'.ip
+
+relationship 15cdd881-18f4-0d4b-36b4-efbf36042f2a
+	fromColumn: 'repo uptime_bdd_events'.ip
+	toColumn: 'repo servidor'.ip
+
+relationship 4dcc3e07-4609-df2d-5b14-0b9c08157772
+	fromColumn: 'repo bddsize'.FechaC
+	toColumn: Calendario1.Fecha
+
+relationship af722e82-8fbc-c4b0-4f0a-0ae59ff6b95e
+	fromColumn: 'repo disco'.FechaC
+	toColumn: Calendario1.Fecha
+
+relationship bd314d6b-276d-6990-5401-abe2be148544
+	fromColumn: 'repo tablespaces'.FechaC
+	toColumn: Calendario1.Fecha
+
+relationship d6628439-9db5-4653-01fe-5a2efa0b7935
+	fromColumn: 'repo rman'.FechaC
+	toColumn: Calendario1.Fecha
+
+relationship d2163768-30c7-0d30-bb25-50b9273057a2
+	fromColumn: 'public vw_rman_intervalos'.fechainicio
+	toColumn: Calendario1.Fecha
+

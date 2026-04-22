@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "673cc46fea0e8af48b77",
+  "displayName": "Respaldos Fallidos",
+  "displayOption": "FitToPage",
+  "height": 520,
+  "width": 320,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "57ccf34b25a7d17eb1bf",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "repo rman"
+              }
+            },
+            "Property": "Total_Dias_Failed"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "7de883b764898f788ab4",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "60336ae8e212dbe8be94",
+        "boundFilter": "57ccf34b25a7d17eb1bf",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "repo rman"
+              }
+            },
+            "Property": "Total_Dias_Failed"
+          }
+        }
+      }
+    ],
+    "acceptsFilterContext": "None"
+  }
+}

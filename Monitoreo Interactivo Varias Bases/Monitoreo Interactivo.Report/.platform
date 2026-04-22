@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Monitoreo Interactivo"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0951e141-40f9-4509-aa6e-2fc9a74ab22b"
+  }
+}

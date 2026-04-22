@@ -1,0 +1,157 @@
+table 'repo bddsize'
+	lineageTag: 80be2c70-abf6-4d72-b83f-b663ffdf243e
+
+	/// Calcula el promedio de tamaño (GB) de la base de datos en el mes anterior al contexto actual. Usa MAX en lugar de SELECTEDVALUE para mayor robustez cuando hay múltiples meses en contexto. Retorna BLANK si no hay mes anterior disponible.
+	measure 'Promedio Mes Anterior Bddsize' = ```
+			
+			VAR Valor =
+			    CALCULATE(
+			        [Promedio Mensual bddsize],
+			        DATEADD(
+			            Calendario1[Fecha],
+			            -1,
+			            MONTH
+			        )
+			    )
+			RETURN
+			IF( NOT ISBLANK(Valor), Valor )
+			
+			```
+		lineageTag: ba0e6e34-0886-4232-a157-d722e0deee85
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Promedio del tamaño de la base de datos en GB (columna SizeG) para el período filtrado. Base de todas las medidas de tamaño y variación de esta tabla.
+	measure 'Promedio Mensual bddsize' =
+			
+			AVERAGE('repo bddsize'[SizeG])
+		lineageTag: 8af57ba9-cfb6-47b5-b89a-1f9bb48b4fc5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Diferencia en GB entre el tamaño promedio del mes actual y el del mes anterior. Retorna BLANK si no existe registro del mes anterior. Positivo indica crecimiento, negativo indica reducción.
+	measure 'Variación Mes Anterior Bddsize' =
+			
+			VAR Anterior = [Promedio Mes Anterior Bddsize]
+			RETURN
+			IF(
+			    NOT ISBLANK(Anterior),
+			    [Promedio Mensual bddsize] - Anterior
+			)
+		lineageTag: f43d676f-80db-4d9c-a58e-1c3303633ed5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Promedio de las variaciones mensuales de tamaño a lo largo de todos los meses visibles en contexto. Ignora el primer mes de cada base de datos (sin mes anterior). Útil para detectar tendencias de crecimiento sostenido.
+	measure 'Promedio Variación Mensual Bddsize' = ```
+			
+			AVERAGEX(
+			    VALUES ( Calendario1[AñoMes] ),
+			    [Variación Mes Anterior Bddsize]
+			)
+			
+			```
+		lineageTag: 4c5dd9fd-df7c-4aa7-97a0-d0703aebbba7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Genera una etiqueta de texto combinando el tamaño promedio mensual en GB con la variación respecto al mes anterior, en formato '##,##0.00 GB (+/-X.XX GB)'. Si no hay mes anterior disponible, muestra solo el tamaño. Usado en visualizaciones de tarjeta y gráficos de tendencia.
+	measure 'Label Tamaño + Variación' = ```
+			
+			VAR Valor = [Variación Mes Anterior Bddsize]
+			RETURN
+			FORMAT([Promedio Mensual bddsize], "#,##0.00")
+			    & IF(
+			        NOT ISBLANK(Valor),
+			        " (" & FORMAT(Valor, "+0.00;-0.00") & " GB)",
+			        ""
+			    )
+			
+			```
+		lineageTag: 3495e4f7-3e76-40f0-8dbf-ea3a0ae1a26d
+
+	/// Dirección IP del servidor donde reside la base de datos. Clave de relación con repo servidor.
+	column ip
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 38846c71-787f-40e4-9d93-c3e9aacaefdd
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador de la instancia de base de datos (SID). Junto con ip, identifica unívocamente cada base de datos.
+	column sid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 6d58722c-1cfc-4b8c-90c3-cf6898f6f66c
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tamaño de la base de datos en la unidad original de la fuente (Bytes o KB según configuración). Base para el cálculo de SizeM y SizeG.
+	column tamano
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 632644ff-bd21-4b32-9701-11cdcf650c98
+		summarizeBy: none
+		sourceColumn: tamano
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha y hora en que se tomó la muestra de tamaño de la base de datos. Base para las columnas calculadas FechaC, y agrupaciones temporales.
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3c0ee7ca-353d-451a-8621-6f3282f9bf52
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tamaño de la base de datos convertido a Megabytes. Columna intermedia de cálculo.
+	column SizeM = 'repo bddsize'[tamano]/1024
+		lineageTag: 3e83af03-06bb-4682-8739-f025a47533ea
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tamaño de la base de datos convertido a Gigabytes. Columna principal usada en todas las medidas de tamaño.
+	column SizeG = 'repo bddsize'[tamano]/1024/1024
+		lineageTag: b7b9439e-5f3b-4ef5-b785-9271a643dee3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha truncada al día (sin hora) derivada de la columna fecha. Usada para relacionar con Calendario1[Fecha] y filtrar por día exacto.
+	column FechaC = ```
+			DATEVALUE('repo bddsize'[fecha])
+			
+			```
+		formatString: General Date
+		lineageTag: b9095205-e198-479d-a666-f438015cb9d3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo bddsize' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_bddsize = Source{[Schema="repo",Item="bddsize"]}[Data]
+				in
+				    repo_bddsize
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navegación
+

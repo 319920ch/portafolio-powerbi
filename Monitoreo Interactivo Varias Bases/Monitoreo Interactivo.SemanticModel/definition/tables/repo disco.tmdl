@@ -1,0 +1,114 @@
+table 'repo disco'
+	lineageTag: d7d85292-33a0-4813-af6d-8e009d257ff1
+
+	/// Dirección IP del servidor al que pertenece el disco.
+	column ip
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: fe04a14b-8235-472c-b9aa-6eaa418d7128
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre o letra de la unidad/partición de disco (ej: /data, C:).
+	column unidad
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 37cd1c81-9fec-4cd1-8620-d78091105dbb
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Capacidad total del disco en la unidad original de la fuente (Bytes o KB según configuración).
+	column total
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 5458f752-2857-4c8e-84da-aaea067c67ea
+		summarizeBy: none
+		sourceColumn: total
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Espacio utilizado del disco en la unidad original de la fuente.
+	column usado
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: a5b309b3-bd17-4a29-a72d-ac7ec06cf8fe
+		summarizeBy: none
+		sourceColumn: usado
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha y hora en que se tomó la muestra de uso de disco.
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e516c4dd-31f4-4160-a0c3-04852ec69daa
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Punto de montaje del disco en el sistema operativo (ej: /, /u01, /backup).
+	column pmontaje
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: fe18e0ff-cd95-42a8-b8d0-d53aa0415966
+		summarizeBy: none
+		sourceColumn: pmontaje
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Capacidad total del disco en Megabytes, convertida desde la unidad original de la fuente.
+	column TotalMB = 'repo disco'[total] /1024
+		lineageTag: 73dd0c05-b80c-42ef-90f6-1ebd39532d5d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Espacio usado en el disco en Megabytes, convertido desde la unidad original de la fuente.
+	column UsadoMB = 'repo disco'[usado]/1024
+		lineageTag: 42beaaa0-02e4-497a-bfe8-97602f251f44
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Espacio usado en el disco en Gigabytes. Columna principal para visualizaciones de uso de disco.
+	column UsadoGB = 'repo disco'[UsadoMB]/1024
+		lineageTag: b5d4b077-2796-4eea-bd38-957c65ef0bfe
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha truncada al día (sin hora) derivada de la columna fecha. Usada para relacionar con Calendario1[Fecha].
+	column FechaC = DATEVALUE('repo disco'[fecha])
+		formatString: General Date
+		lineageTag: 6e00f0b0-db2b-4b5d-94b8-298e3dce4d59
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo disco' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_disco = Source{[Schema="repo",Item="disco"]}[Data]
+				in
+				    repo_disco
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,75 @@
+table 'repo servidor'
+	lineageTag: 5c370da6-6ced-417a-b76a-ee3a13bebe61
+
+	/// Dirección IP del servidor. Clave de relación con repo servidor.
+	column ip
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(max)
+		lineageTag: 3b6b0334-d491-4cdc-82aa-184c42cf1661
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Sistema operativo instalado en el servidor (ej: Oracle Linux 7, Windows Server 2019).
+	column so
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e72d931e-4b60-4a48-bb48-68636d461fe1
+		summarizeBy: none
+		sourceColumn: so
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre de host del servidor.
+	column hostname
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 96157fbe-2b58-49d7-8ffb-5728a2d1e333
+		summarizeBy: none
+		sourceColumn: hostname
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Ubicación física o lógica del servidor (ej: Data Center Principal, Nube).
+	column ubicacion
+		dataType: string
+		lineageTag: b0de77dd-be8e-437d-9b10-f021c1f48202
+		summarizeBy: none
+		sourceColumn: ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Versión del motor de base de datos instalado (ej: Oracle 19c, PostgreSQL 14).
+	column versiondb
+		dataType: string
+		lineageTag: b40f57a3-8efa-4904-8b1a-912080412434
+		summarizeBy: none
+		sourceColumn: versiondb
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre o instancia de la base de datos principal del servidor.
+	column basedatos
+		dataType: string
+		lineageTag: 0c948808-4ba8-4d71-a6a6-48bd2680e428
+		summarizeBy: none
+		sourceColumn: basedatos
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo servidor' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_servidor = Source{[Schema="repo",Item="servidor"]}[Data],
+				    #"Valor reemplazado" = Table.ReplaceValue(repo_servidor,"/32","",Replacer.ReplaceText,{"ip"})
+				in
+				    #"Valor reemplazado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

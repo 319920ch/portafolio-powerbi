@@ -1,0 +1,121 @@
+table 'public vw_rman_intervalos'
+	lineageTag: 47053336-8632-4a86-a041-d96c1011f1d5
+
+	/// Dirección IP del servidor al que pertenece el respaldo.
+	column ip
+		dataType: string
+		lineageTag: 027f1304-cc24-4bd0-a50e-b2e2dd5d573d
+		summarizeBy: none
+		sourceColumn: ip
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador de la instancia de base de datos (SID) respaldada.
+	column sid
+		dataType: string
+		lineageTag: ccbc46bf-6cf7-4958-a3be-2ddddb21bdd5
+		summarizeBy: none
+		sourceColumn: sid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tamaño del respaldo en Megabytes.
+	column tamanomb
+		dataType: double
+		lineageTag: 00a0ae22-d226-40d7-a970-a9321bef05ce
+		summarizeBy: sum
+		sourceColumn: tamanomb
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha y hora de inicio del respaldo actual.
+	column fechainicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a738e37f-3396-42fe-be6b-17b13f0084cd
+		summarizeBy: none
+		sourceColumn: fechainicio
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Estado de completitud del respaldo: COMPLETED o FAILED.
+	column completado
+		dataType: string
+		lineageTag: 21f87221-225a-4cbd-b463-64aaabc47a84
+		summarizeBy: none
+		sourceColumn: completado
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tipo de respaldo RMAN ejecutado (ej: INCREMENTAL LEVEL 0, INCREMENTAL LEVEL 1, ARCHIVELOG).
+	column tiporman
+		dataType: string
+		lineageTag: 006498e0-6279-4c28-a8a7-ae6b44bb2217
+		summarizeBy: none
+		sourceColumn: tiporman
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tiempo de ejecución del respaldo en segundos.
+	column tiempoejecucion
+		dataType: double
+		lineageTag: d123258d-255c-453b-b124-308a65507c5e
+		summarizeBy: sum
+		sourceColumn: tiempoejecucion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha y hora de inicio del respaldo COMPLETED anterior del mismo servidor/SID. Usada para calcular el intervalo entre respaldos.
+	column fechainicio_anterior
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ef98381c-7e87-45f7-9b8e-358db2091d02
+		summarizeBy: none
+		sourceColumn: fechainicio_anterior
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Horas transcurridas entre el respaldo actual y el anterior COMPLETED del mismo servidor/SID. Campo precalculado en la vista de la fuente.
+	column horas_entre_respaldos
+		dataType: double
+		lineageTag: 0fd8e0e5-7c0f-44e3-89f9-0ae2f42250e8
+		summarizeBy: sum
+		sourceColumn: horas_entre_respaldos
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'public vw_rman_intervalos' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("192.168.2.51", "repo"),
+				    public_vw_rman_intervalos = Origen{[Schema="public",Item="vw_rman_intervalos"]}[Data]
+				in
+				    public_vw_rman_intervalos
+
+	changedProperty = IsHidden
+

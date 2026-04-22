@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "1de6c50b3009e31932d7",
+  "position": {
+    "x": 0,
+    "y": 71.975683890577514,
+    "z": 3000,
+    "height": 36.960486322188451,
+    "width": 795.62310030395145,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Instrucción:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#b3b3b3"
+                    }
+                  },
+                  {
+                    "value": " Haga clic en el nombre de tablespace ↓ del cual quiere ver el cambio mes a mes en el gráfico de líneas →",
+                    "textStyle": {
+                      "color": "#b3b3b3"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "4a36028f9b66596cd28a",
+  "displayName": "91.14_barras_respaldos",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2050f21bc2bc3d34212e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "repo rman"
+              }
+            },
+            "Property": "ip"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "r",
+              "Entity": "repo rman",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "ip"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'192.168.91.14/32'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "6a7e19a95ff4b965dcef",
+      "target": "d1b51d54797977e248dd",
+      "type": "DataFilter"
+    },
+    {
+      "source": "6a7e19a95ff4b965dcef",
+      "target": "8c89daeb86eeac569de5",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6a7e19a95ff4b965dcef",
+      "target": "b81981d466a91e339c06",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6a7e19a95ff4b965dcef",
+      "target": "78215224aac375e471f4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6a7e19a95ff4b965dcef",
+      "target": "607a539f753cc9788e05",
+      "type": "NoFilter"
+    }
+  ]
+}

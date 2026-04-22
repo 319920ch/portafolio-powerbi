@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["repo bddsize","repo disco","repo rman","repo servidor","repo tablespaces","repo uptime_bdd_events","repo uptime_bdd_current","Calendario","public vw_rman_intervalos"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table 'repo bddsize'
+ref table 'repo disco'
+ref table 'repo rman'
+ref table 'repo servidor'
+ref table 'repo tablespaces'
+ref table 'repo uptime_bdd_events'
+ref table 'repo uptime_bdd_current'
+ref table 'public vw_rman_intervalos'
+ref table Calendario1
+
+ref cultureInfo en-US
+

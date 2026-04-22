@@ -1,0 +1,120 @@
+table 'repo tablespaces'
+	lineageTag: 969773a5-5f0d-4984-b9a8-70daee1d1c23
+
+	/// Dirección IP del servidor al que pertenece el tablespace.
+	column ip
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 2f34f95e-cb44-4118-a157-a5bbd9fa6a3a
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador de la instancia de base de datos (SID) a la que pertenece el tablespace.
+	column sid
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0bcb237e-e17c-43b3-ba46-1d83b85e679e
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del tablespace dentro de la base de datos.
+	column tablespace
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 7597ac58-7f71-486f-b048-6bae08ebd0a6
+		summarizeBy: none
+		sourceColumn: tablespace
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tamaño máximo asignable al tablespace en la unidad original de la fuente.
+	column tamano_max
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: c1337e7a-c000-48fc-a363-8f726fc73eb5
+		summarizeBy: none
+		sourceColumn: tamano_max
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha y hora en que se tomó la muestra de uso del tablespace.
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5d59434f-45a0-49c1-a03e-a31c619b4eea
+		summarizeBy: none
+		sourceColumn: fecha
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Espacio utilizado en el tablespace en la unidad original de la fuente.
+	column tamano_usado
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 1b4af086-eac8-4079-9aae-5f4a1f39fce2
+		summarizeBy: none
+		sourceColumn: tamano_usado
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Porcentaje máximo de uso del tablespace registrado en la muestra. Indicador de alerta de capacidad.
+	column max_pct_usado
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: d8639ac3-8c44-4694-8e69-094cffae8321
+		summarizeBy: none
+		sourceColumn: max_pct_usado
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Número de semana del año derivado de la columna fecha. Usado para agrupaciones semanales de uso de tablespaces.
+	column semana = WEEKNUM('repo tablespaces'[fecha])
+		formatString: 0
+		lineageTag: 85d864b4-eba8-4b72-a125-f9e63db8dc93
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	/// Espacio usado en el tablespace convertido a Gigabytes desde tamano_usado. Columna principal para visualizaciones de uso de tablespaces.
+	column tamaño_usado_GB = 'repo tablespaces'[tamano_usado]/1024
+		lineageTag: 1b1191d1-e6c9-4f2e-820b-fba8837992ed
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha truncada al día (sin hora) derivada de la columna fecha. Usada para relacionar con Calendario1[Fecha].
+	column FechaC = DATEVALUE('repo tablespaces'[fecha])
+		formatString: General Date
+		lineageTag: 568f2503-76b7-44ad-a364-ea0a96ccc6b2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo tablespaces' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_tablespaces = Source{[Schema="repo",Item="tablespaces"]}[Data]
+				in
+				    repo_tablespaces
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

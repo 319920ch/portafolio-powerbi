@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "793049d48f527d91f9c4",
+  "displayName": "Respaldos Faltantes",
+  "displayOption": "FitToPage",
+  "height": 520,
+  "width": 320,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d2bfbf2c40feebe65da4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "repo rman"
+              }
+            },
+            "Property": "Dias Faltantes"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "eb2506e6fa3cd330d6d9",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "bcf57ff6095582c111e2",
+        "boundFilter": "d2bfbf2c40feebe65da4",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "repo rman"
+              }
+            },
+            "Property": "Dias Faltantes"
+          }
+        }
+      }
+    ],
+    "acceptsFilterContext": "None"
+  }
+}

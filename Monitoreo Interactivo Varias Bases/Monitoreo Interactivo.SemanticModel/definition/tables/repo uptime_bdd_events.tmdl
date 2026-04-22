@@ -1,0 +1,309 @@
+table 'repo uptime_bdd_events'
+	lineageTag: 3825a2a3-6a11-4014-afd6-71e2dc541b3e
+
+	/// Cuenta el total de eventos donde el servicio estuvo caído (arriba = 0). Se usa para cuantificar incidencias de indisponibilidad en el período filtrado.
+	measure 'Eventos DOWN' =
+			
+			CALCULATE(
+			    COUNTROWS('repo uptime_bdd_events'),
+			    'repo uptime_bdd_events'[arriba] = 0
+			)
+		formatString: 0
+		lineageTag: f626d081-1bd5-4ae6-937d-28fd24e00ea9
+
+	/// Calcula la duración total en segundos de cada evento DOWN, acotada al fin del mes en curso. Usa la columna FechaFin_Gantt directamente y aplica el límite de fin de mes como VAR externa al SUMX para mayor claridad y consistencia.
+	measure 'DuracionSegundos (Medida)' = ```
+			
+			VAR Hoy = TODAY()
+			VAR FinMes =
+			    EOMONTH ( DATE ( YEAR ( Hoy ), MONTH ( Hoy ), 1 ), 0 ) + TIME ( 23, 59, 59 )
+			
+			RETURN
+			SUMX(
+			    'repo uptime_bdd_events',
+			    VAR Inicio = 'repo uptime_bdd_events'[hora_evento]
+			    VAR FinReal = 'repo uptime_bdd_events'[FechaFin_Gantt]
+			    VAR Fin = IF( FinReal > FinMes, FinMes, FinReal )
+			    RETURN
+			    IF(
+			        NOT ISBLANK( Fin ) && Fin > Inicio,
+			        DATEDIFF( Inicio, Fin, SECOND ),
+			        0
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: cdf100ec-9b2d-40aa-a854-add7d376ad3e
+
+	/// Convierte la duración total de eventos DOWN a días decimales (DuracionSegundos / 86400). Útil para cálculos de disponibilidad y visualizaciones de Gantt.
+	measure 'DuracionTiempo (Medida)' = ```
+			
+			DIVIDE( [DuracionSegundos (Medida)], 86400 )
+			
+			```
+		lineageTag: b9ae8901-b6f5-4a55-97b2-7e7a37cbf456
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Formatea la duración total de eventos DOWN en texto legible con el formato 'Xd HH:MM:SS'. Se basa en DuracionSegundos (Medida) y retorna '0d 00:00:00' si no hay duración registrada.
+	measure DuracionTotal_DD_HHMMSS = ```
+			
+			VAR TotalSegundos = [DuracionSegundos (Medida)]
+			VAR Dias =
+			    INT( TotalSegundos / 86400 )
+			VAR Horas =
+			    INT( MOD( TotalSegundos, 86400 ) / 3600 )
+			VAR Minutos =
+			    INT( MOD( TotalSegundos, 3600 ) / 60 )
+			VAR Segundos =
+			    MOD( TotalSegundos, 60 )
+			RETURN
+			IF(
+			    TotalSegundos > 0,
+			    FORMAT(Dias, "0") & "d "
+			        & FORMAT(Horas, "00") & ":"
+			        & FORMAT(Minutos, "00") & ":"
+			        & FORMAT(Segundos, "00"),
+			    "0d 00:00:00"
+			)
+			
+			
+			
+			```
+		lineageTag: 21d7745f-b33f-45a2-a313-23b37fbbd049
+
+	/// Devuelve la fecha de fin efectiva de un evento para el Gantt mensual. Si el evento se extiende más allá del fin del mes actual, lo recorta al último instante del mes (23:59:59). Garantiza que el Gantt no muestre eventos fuera del período del informe.
+	measure FechaFin_Gantt_Mes = ```
+			
+			VAR FinReal =
+			    MAX ( 'repo uptime_bdd_events'[FechaFin_Gantt] )
+			
+			VAR Hoy = TODAY()
+			
+			VAR InicioMes =
+			    DATE ( YEAR ( Hoy ), MONTH ( Hoy ), 1 )
+			
+			VAR FinMes =
+			    EOMONTH ( InicioMes, 0 ) + TIME ( 23, 59, 59 )
+			
+			RETURN
+			IF (
+			    FinReal > FinMes,
+			    FinMes,
+			    FinReal
+			)
+			
+			```
+		formatString: General Date
+		lineageTag: 3b047c5b-d9c2-4ddf-b9f1-a579e1d70121
+
+	/// Indicador (1/0) que determina si un evento pertenece al mes en curso. Retorna 1 si el inicio del evento es anterior o igual al último día del mes actual. Se usa para filtrar eventos vigentes en el informe mensual.
+	measure Evento_Activo_Mes = ```
+			
+			VAR InicioEvento =
+			    MIN ( 'repo uptime_bdd_events'[hora_evento] )
+			
+			VAR Hoy = TODAY()
+			
+			VAR InicioMes =
+			    DATE ( YEAR ( Hoy ), MONTH ( Hoy ), 1 )
+			
+			VAR FinMes =
+			    EOMONTH ( InicioMes, 0 )
+			
+			RETURN
+			IF (
+			    InicioEvento <= FinMes,
+			    1,
+			    0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: c12bf501-57d4-4121-9970-9f8b30d8ea14
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 702b11f2-7f8f-4553-bb7a-b488aa9f6f82
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ip
+		dataType: string
+		lineageTag: 2b4ee980-c415-48b2-9449-0491eddbb5c1
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		lineageTag: f6a83558-a221-40eb-870f-fe9f39ab5428
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column hora_evento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 12be8d54-c384-4ce7-9c26-3dac08310cee
+		summarizeBy: none
+		sourceColumn: hora_evento
+
+		annotation SummarizationSetBy = Automatic
+
+	column arriba
+		dataType: int64
+		formatString: 0
+		lineageTag: abafbe29-493a-46e4-9d41-681d235c845d
+		summarizeBy: sum
+		sourceColumn: arriba
+
+		annotation SummarizationSetBy = Automatic
+
+	column detalle
+		dataType: string
+		lineageTag: b9b0620b-5cd6-4ca4-a9f4-19084e54f16e
+		summarizeBy: none
+		sourceColumn: detalle
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha y hora del siguiente evento registrado para el mismo servidor (ip+sid), ordenado por hora_evento. Usada para calcular la duracíon de cada evento hasta que el estado cambió.
+	column FechaSiguienteEvento = ```
+			
+			VAR sidActual = 'repo uptime_bdd_events'[sid]
+			VAR fechaActual = 'repo uptime_bdd_events'[hora_evento]
+			RETURN
+			CALCULATE(
+			    MIN('repo uptime_bdd_events'[hora_evento]),
+			    FILTER(
+			        ALL('repo uptime_bdd_events'),
+			        'repo uptime_bdd_events'[sid] = sidActual &&
+			        'repo uptime_bdd_events'[hora_evento] > fechaActual
+			    )
+			)
+			
+			```
+		formatString: General Date
+		lineageTag: 54e3411b-640b-4cff-bb1a-977a7b50627d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Duración del evento formateada en texto HH:MM:SS, calculada entre hora_evento y FechaSiguienteEvento. Usada para mostrar el tiempo de caída directamente en tablas y Gantt.
+	column DuracionHHMMSS = ```
+			
+			VAR Inicio =
+			    'repo uptime_bdd_events'[hora_evento]
+			
+			VAR Fin =
+			    'repo uptime_bdd_events'[FechaFin_Gantt_Mes]
+			
+			VAR SegundosTotales =
+			    DATEDIFF( Inicio, Fin, SECOND )
+			
+			VAR Horas =
+			    INT( SegundosTotales / 3600 )
+			
+			VAR Minutos =
+			    INT( MOD( SegundosTotales, 3600 ) / 60 )
+			
+			VAR Segundos =
+			    MOD( SegundosTotales, 60 )
+			
+			RETURN
+			IF(
+			    ISBLANK(Fin) || Fin <= Inicio,
+			    BLANK(),
+			    FORMAT(Horas, "0")
+			        & ":" &
+			        FORMAT(Minutos, "00")
+			        & ":" &
+			        FORMAT(Segundos, "00")
+			)
+			
+			
+			
+			```
+		dataType: string
+		lineageTag: 697e8eb4-aa7f-4462-ba8f-24a29e344a14
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Etiqueta de texto con el estado del evento: 'DOWN' si arriba=0, 'UP' si arriba=1. Usada en visualizaciones de historial de eventos.
+	column Estado = ```
+			
+			IF('repo uptime_bdd_events'[arriba] = 1, "Arriba", "Abajo")
+			
+			```
+		lineageTag: befb7338-39f3-4514-9980-17b5900de625
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de fin del evento para el diagrama Gantt: equivale a FechaSiguienteEvento o al momento actual si el evento sigue activo (sin siguiente evento registrado).
+	column FechaFin_Gantt = ```
+			
+			VAR FechaSig = 'repo uptime_bdd_events'[FechaSiguienteEvento]
+			VAR LastCheck =
+			    CALCULATE(
+			        MAX('repo uptime_bdd_current'[last_check]),
+			        FILTER(
+			            'repo uptime_bdd_current',
+			            'repo uptime_bdd_current'[sid]
+			                = 'repo uptime_bdd_events'[sid]
+			        )
+			    )
+			RETURN
+			COALESCE( FechaSig, LastCheck )
+			
+			```
+		formatString: General Date
+		lineageTag: 80fe13f7-7a5d-46d7-a068-83df57260380
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Duración del evento expresada en horas decimales, calculada entre hora_evento y FechaFin_Gantt. Complementa DuracionHHMMSS para cálculos numéricos.
+	column DuraHoras = ```
+			
+			VAR Inicio = 'repo uptime_bdd_events'[hora_evento]
+			VAR Fin    = 'repo uptime_bdd_events'[FechaFin_Gantt]
+			RETURN
+			IF(
+			    NOT ISBLANK(Fin) && Fin > Inicio,
+			    DATEDIFF( Inicio, Fin, MINUTE ) / 60,
+			    0
+			)
+			
+			
+			```
+		lineageTag: 2c693fd4-604d-41c8-8eeb-264e6a540ee8
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'repo uptime_bdd_events' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("192.168.2.51", "repo"),
+				    repo_uptime_bdd_events = Origen{[Schema="repo",Item="uptime_bdd_events"]}[Data]
+				in
+				    repo_uptime_bdd_events
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
