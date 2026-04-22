@@ -1,0 +1,40 @@
+table auth_user
+	lineageTag: 17a855a6-7565-479b-8222-65c623a34340
+
+	/// Identificador único del usuario/consultor en el sistema.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 72f7ad25-ac9d-4e7b-a2ca-604e750b364e
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del consultor o ingeniero. Usado para filtrar y agrupar horas extras por responsable.
+	column Consultor
+		dataType: string
+		lineageTag: f73fb221-f8c1-4212-9f73-4a67dd9a1d9a
+		summarizeBy: none
+		sourceColumn: Consultor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition auth_user = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    auth_user_Table = public_Schema{[Name="auth_user",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(auth_user_Table,{"password", "last_login", "is_superuser", "username", "email", "is_staff", "is_active", "date_joined", "auth_user_groups", "auth_user_user_permissions", "django_admin_log", "fichasgest_ficha"}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas quitadas", "Consultor", each Text.Combine({[first_name], [last_name]}, " ")),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada",{"first_name", "last_name"})
+				in
+				    #"Columnas quitadas1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

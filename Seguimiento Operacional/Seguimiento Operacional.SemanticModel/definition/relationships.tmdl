@@ -1,0 +1,67 @@
+relationship 351a7ad2-eba4-4a8a-b354-0b7a195c969a
+	fromColumn: fichasgest_contrato.cliente_id
+	toColumn: fichasgest_cliente.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship b8aba358-9562-4e50-835a-fb485d6edebf
+	fromColumn: fichasgest_contrato_horarios.contrato_id
+	toColumn: fichasgest_contrato.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 00122a7c-b229-4718-add3-7f95a319822a
+	fromColumn: fichasgest_contrato_horarios.horario_id
+	toColumn: fichasgest_horario.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship d8ecf7da-66be-4f8a-b22e-59e753deb91f
+	fromColumn: fichasgest_ficha.cliente_id
+	toColumn: fichasgest_cliente.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 33d1129e-c474-4110-93ef-e34fd25b129b
+	isActive: false
+	fromColumn: fichasgest_ficha.contrato_id
+	toColumn: fichasgest_contrato.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 25237149-e9cb-4ed1-8709-cdda599db6a1
+	fromColumn: fichasgest_ficha_productos.ficha_id
+	toColumn: fichasgest_ficha.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 280d843c-c5ba-4ef3-9a05-1463520556a2
+	fromColumn: fichasgest_ficha_productos.productos_soporte_id
+	toColumn: fichasgest_productos_soporte.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship c6bbdaba-0adf-4c20-62ee-02a229c0a46b
+	fromColumn: fichasgest_ficha.FechaC
+	toColumn: Calendario.Fecha
+
+relationship b3e38bac-e599-c8e3-863d-0233d9f47703
+	fromColumn: fichasgest_ficha.ingeniero_id
+	toColumn: auth_user.id
+
+relationship 81ac43a1-7670-36e4-e103-5fc6b1fa372a
+	fromColumn: hora_inicio_fin.FechaC
+	toColumn: Calendario.Fecha
+
+relationship 97f8f4d0-bbb0-91c2-7f14-570ffc9dd82c
+	fromColumn: hora_inicio_fin.ingeniero_id
+	toColumn: auth_user.id
+
+relationship 7b15f936-695f-0994-255e-a2e6200db208
+	fromColumn: hora_inicio_fin.cliente_id
+	toColumn: fichasgest_cliente.id
+
+relationship d468cebc-c20c-c170-c2d0-bf3b0df4d5d9
+	fromColumn: fichasgest_ficha.proyecto_id
+	toColumn: fichasgest_proyecto.id
+

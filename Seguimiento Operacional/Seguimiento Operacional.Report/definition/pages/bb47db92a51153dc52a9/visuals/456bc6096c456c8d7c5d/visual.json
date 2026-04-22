@@ -1,0 +1,702 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "456bc6096c456c8d7c5d",
+  "position": {
+    "x": 32.922837100545593,
+    "y": 423.0085736554949,
+    "z": 10000,
+    "height": 285.33125487139512,
+    "width": 686.3912704598597,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "auth_user"
+                    }
+                  },
+                  "Property": "Consultor"
+                }
+              },
+              "queryRef": "auth_user.Consultor",
+              "nativeQueryRef": "Consultor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_cliente"
+                    }
+                  },
+                  "Property": "empresa"
+                }
+              },
+              "queryRef": "fichasgest_cliente.empresa",
+              "nativeQueryRef": "Cliente",
+              "displayName": "Cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "hora_inicio_fin"
+                    }
+                  },
+                  "Property": "fecha_actividad"
+                }
+              },
+              "queryRef": "hora_inicio_fin.fecha_actividad",
+              "nativeQueryRef": "Fecha",
+              "displayName": "Fecha"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "hora_inicio_fin"
+                    }
+                  },
+                  "Property": "Extra Tarde Inicio"
+                }
+              },
+              "queryRef": "hora_inicio_fin.Extra Tarde Inicio",
+              "nativeQueryRef": "Inicio",
+              "displayName": "Inicio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "hora_inicio_fin"
+                    }
+                  },
+                  "Property": "Extra Tarde Fin"
+                }
+              },
+              "queryRef": "hora_inicio_fin.Extra Tarde Fin",
+              "nativeQueryRef": "Fin",
+              "displayName": "Fin"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "hora_inicio_fin"
+                    }
+                  },
+                  "Property": "HorasExtra50_h_mm"
+                }
+              },
+              "queryRef": "hora_inicio_fin.HorasExtra50_h_mm",
+              "nativeQueryRef": "Horas",
+              "displayName": "Horas"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "auth_user"
+                  }
+                },
+                "Property": "Consultor"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.6268677251978D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "HORAS EXTRAS REGISTRADAS"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Madrugada (0:00-5:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.85075457494445D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "HORAS EXTRAS REGISTRADAS"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Mañana (6:00-11:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.16231327472799D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "HORAS EXTRAS REGISTRADAS"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Tarde (12:00-17:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.5970121642164D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "HORAS EXTRAS REGISTRADAS"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Noche (18:00-23:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.03668791604053D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "hora_inicio_fin"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Mañana (6:00-11:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.02653923747013D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "hora_inicio_fin"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Tarde (12:00-17:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.02966432474629D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "hora_inicio_fin"
+                          }
+                        },
+                        "Property": "Bloque Horario"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Noche (18:00-23:59)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.49365144195353D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "hora_inicio_fin"
+                          }
+                        },
+                        "Property": "Hora"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Hora al 100%'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(hora_inicio_fin.Extra Temprano Inicio)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.5244909084142D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "hora_inicio_fin"
+                          }
+                        },
+                        "Property": "Hora"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Hora al 100%'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Min(hora_inicio_fin.Extra Temprano Fin)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "218.51542627472384D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "hora_inicio_fin.fecha_actividad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "123.2688951424461D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fichasgest_cliente.empresa"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Horas Extras al 50%'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8AD50B'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "043ad11e361c4b307b99",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "hora_inicio_fin"
+              }
+            },
+            "Property": "Extra Tarde Inicio"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "h",
+              "Entity": "hora_inicio_fin",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "h"
+                              }
+                            },
+                            "Property": "Extra Tarde Inicio"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "14648a6058d1c24da740",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "hora_inicio_fin"
+              }
+            },
+            "Property": "HorasExtra50_h_mm"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "h",
+              "Entity": "hora_inicio_fin",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "h"
+                            }
+                          },
+                          "Property": "HorasExtra50_h_mm"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'00:00'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

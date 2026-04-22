@@ -1,0 +1,29 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["fichasgest_cliente","fichasgest_contrato","fichasgest_contrato_horarios","fichasgest_feriado","fichasgest_ficha","fichasgest_ficha_productos","fichasgest_horario","fichasgest_productos_soporte","auth_user","hora_inicio_fin","fichasgest_proyecto"]
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table fichasgest_cliente
+ref table fichasgest_contrato
+ref table fichasgest_contrato_horarios
+ref table fichasgest_feriado
+ref table fichasgest_ficha
+ref table fichasgest_ficha_productos
+ref table fichasgest_horario
+ref table fichasgest_productos_soporte
+ref table auth_user
+ref table Calendario
+ref table hora_inicio_fin
+ref table fichasgest_proyecto
+
+ref cultureInfo es-ES
+

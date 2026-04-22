@@ -1,0 +1,72 @@
+table fichasgest_horario
+	lineageTag: 7b1e79df-1d18-4b24-bc15-5db708066283
+
+	/// Identificador único del horario.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: a12e0f67-a47c-4666-8499-5086f30afeb3
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Hora de inicio de la jornada ordinaria (ej: 08:00). Usada para calcular tramos extra temprano y tarde en hora_inicio_fin.
+	column horario_inicio
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: ac985f56-e9e3-40e5-a586-4b4a0c82326f
+		summarizeBy: none
+		sourceColumn: horario_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	/// Hora de fin de la jornada ordinaria (ej: 18:00). Usada para calcular el tramo extra tarde en hora_inicio_fin.
+	column horario_fin
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 63decee2-027f-402d-b7f7-dc515f82002a
+		summarizeBy: none
+		sourceColumn: horario_fin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	/// Valor numérico del parámetro del horario (ej: duración máxima ordinaria en horas).
+	column parametro
+		dataType: double
+		lineageTag: 4a3231a2-6e93-41f2-8693-56d5257b2ac1
+		summarizeBy: none
+		sourceColumn: parametro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Tipo de horario definido (ej: 'Ordinario', 'Especial'). Usado para clasificar el contrato en fichasgest_contrato_horarios.
+	column tipo
+		dataType: string
+		lineageTag: 604ea5a3-9167-4d2b-9fd2-c525c0b260ba
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_horario = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_horario_Table = public_Schema{[Name="fichasgest_horario",Kind="Table"]}[Data]
+				in
+				    fichasgest_horario_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

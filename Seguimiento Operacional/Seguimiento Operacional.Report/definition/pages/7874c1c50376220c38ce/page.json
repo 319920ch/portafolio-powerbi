@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "7874c1c50376220c38ce",
+  "displayName": "Horas Consultor Mes",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "38944025ae6ace0102cc",
+      "target": "892b33d2ec21646120ac",
+      "type": "DataFilter"
+    }
+  ]
+}

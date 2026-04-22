@@ -1,0 +1,38 @@
+table fichasgest_cliente
+	lineageTag: 9ff3f082-4ff9-44d4-9476-c5c79dea520f
+
+	/// Identificador único del cliente.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1494b534-c3de-41cc-a043-085d868af842
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre de la empresa cliente. Usado para filtrar y agrupar contratos, fichas y horas extras por cliente.
+	column empresa
+		dataType: string
+		lineageTag: 9ce948ac-071b-4f33-acfd-95d74f496fd8
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_cliente_Table = public_Schema{[Name="fichasgest_cliente",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(fichasgest_cliente_Table,{"direccion", "telefono", "email", "contacto1", "correo1", "contacto2", "correo2", "contacto3", "correo3", "site", "nombre_comercial"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,198 @@
+table Calendario
+	lineageTag: 8589259a-0184-4fd0-b7a2-dfc79d5a2067
+
+	/// Clave principal de la tabla calendario. Usada para crear relaciones con columnas de fecha de las tablas de hechos.
+	column Date
+		formatString: General Date
+		lineageTag: c0d989e3-a47d-47ab-ad52-0765e1a8c650
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha del día en formato DateTime. Usada como eje en visualizaciones de serie temporal.
+	column Fecha
+		formatString: General Date
+		lineageTag: b6f9240d-c04d-4dec-923b-adf0a3aa7711
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de año (ej: 2026). Usado para agrupaciones y filtros anuales.
+	column Año
+		formatString: 0
+		lineageTag: 20c220b5-4f81-46f9-8d1d-e53325977144
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de mes del año (1-12). Usado para ordenar y filtrar por mes de forma numérica.
+	column MesNum
+		formatString: 0
+		lineageTag: 60729910-cd4a-4d0d-9114-c1cf1dc10392
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del mes en texto (ej: 'Marzo'). Usado como etiqueta en ejes y segmentadores.
+	column Mes
+		lineageTag: d8a227df-e69c-48a1-9def-aa0c7d5ca6ea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+		sortByColumn: MesNum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Etiqueta combinada de año y mes (ej: 'Mar 2026'). Usada como eje en gráficos de tendencia mensual.
+	column AñoMes
+		lineageTag: 3da4a505-acec-46f0-8a15-038feaf08498
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AñoMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave numérica AAAAMM (ej: 202603). Usada para ordenar correctamente la columna AñoMes en visualizaciones.
+	column AñoMesOrden
+		formatString: 0
+		lineageTag: f9af472b-735e-467e-8c2d-9a61eafd38a7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [AñoMesOrden]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número del día dentro del mes (1-31).
+	column DiaMes
+		formatString: 0
+		lineageTag: 75245bb8-f6a1-49fd-9429-66304a494e6e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiaMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del día de la semana en texto (ej: 'Lunes'). Usado en análisis de distribución semanal.
+	column DiaSemana
+		lineageTag: d12de044-43f9-4f0d-8466-82d75eecd825
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemana]
+		sortByColumn: DiaSemanaNum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número del día de la semana. Usado para ordenar correctamente DiaSemana y clasificar fines de semana en columnas calculadas de hora_inicio_fin.
+	column DiaSemanaNum
+		formatString: 0
+		lineageTag: b589df39-e748-4dd9-a20c-cd253af968cc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiaSemanaNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Indicador (1/0) que marca si el día es el último del mes.
+	column EsFinDeMes
+		formatString: 0
+		lineageTag: ae2bb460-8393-44e0-bc54-64cc61de2454
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [EsFinDeMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Indicador (1/0) que marca si el día es el primero del mes.
+	column EsInicioDeMes
+		formatString: 0
+		lineageTag: 19e85f0a-c61c-455c-acbf-31812c8f65af
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [EsInicioDeMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Indicador (1/0) que marca si el día es domingo.
+	column EsDomingo
+		formatString: 0
+		lineageTag: 36a12336-d5b3-48fe-af5b-2d1c2580e14f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [EsDomingo]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Indicador (1/0) calculado que marca si el día es feriado, cruzando con la tabla fichasgest_feriado. Usado en la columna Extra de hora_inicio_fin para clasificar jornadas en feriados.
+	column EsFeriado = VAR fechaActual = Calendario[Fecha] RETURN IF( COUNTROWS( FILTER( 'fichasgest_feriado', fechaActual >= 'fichasgest_feriado'[inicio_feriado] && fechaActual <= 'fichasgest_feriado'[fin_feriado] ) ) > 0, 1, 0 )
+		formatString: 0
+		lineageTag: 78809eac-ebb2-4ae8-952d-9a8f10331712
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				
+				VAR FechaInicio =
+				    DATE(2020, 1, 1)   -- ajusta según tu histórico real
+				VAR FechaFin =
+				    DATE(2030, 12, 31) -- o usa varios años
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(FechaInicio, FechaFin),
+				
+				    -- Fecha base
+				    "Fecha", [Date],
+				
+				    -- Año
+				    "Año", YEAR([Date]),
+				
+				    -- Mes (número)
+				    "MesNum", MONTH([Date]),
+				
+				    -- Mes (nombre)
+				    "Mes",
+				        VAR m = FORMAT ( [Date], "MMMM", "es-ES" )
+				        RETURN
+				            UPPER ( LEFT ( m, 1 ) ) &
+				            MID ( m, 2, LEN ( m ) -1) ,
+				
+				    -- Año-Mes (clave visual)
+				    "AñoMes", FORMAT([Date], "YYYY-MM"),
+				
+				    -- AñoMes ordenable
+				    "AñoMesOrden", YEAR([Date]) * 100 + MONTH([Date]),
+				
+				    -- Día del mes
+				    "DiaMes", DAY([Date]),
+				
+				    -- Día de la semana (nombre)
+				    "DiaSemana", FORMAT([Date], "dddd"),
+				
+				    -- Día de la semana (número, lunes=1)
+				    "DiaSemanaNum", WEEKDAY([Date], 2),
+				
+				    -- Fin de mes
+				    "EsFinDeMes", IF([Date] = EOMONTH([Date], 0), 1, 0),
+				
+				    -- Inicio de mes
+				    "EsInicioDeMes", IF(DAY([Date]) = 1, 1, 0), 
+				    
+				    "EsDomingo", IF (WEEKDAY ([Date], 2 ) = 7, 1, 0)
+				
+				
+				)
+				
+				```
+
+	annotation PBI_Id = ed98f67ffea54a8c9f5e6f23d01c2e3a
+

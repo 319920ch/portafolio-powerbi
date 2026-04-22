@@ -1,0 +1,58 @@
+table fichasgest_proyecto
+	lineageTag: 6507f8d3-dd85-420b-aa59-e5efebc38eff
+
+	/// Identificador único del proyecto.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b782df4-b0b5-47ce-8749-bf0bd6f5dec8
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Código alfanumérico del proyecto (ej: PROJ-001).
+	column codigo
+		dataType: string
+		lineageTag: e63962d6-0de4-41b9-be65-90e78356272f
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Descripción o nombre del proyecto.
+	column descripcion
+		dataType: string
+		lineageTag: 569be7a9-18c8-4933-9a42-f158391f4dfb
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_cliente. Cliente al que pertenece el proyecto.
+	column cliente_id
+		dataType: int64
+		formatString: 0
+		lineageTag: cf62d682-d7ae-4c73-adec-6a9c67cc0a34
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_proyecto = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_proyecto_Table = public_Schema{[Name="fichasgest_proyecto",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(fichasgest_proyecto_Table,{"fecha_creacion", "activo"}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Columnas quitadas","PRY_OCIO","OCIO",Replacer.ReplaceText,{"descripcion"})
+				in
+				    #"Valor reemplazado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

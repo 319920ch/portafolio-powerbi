@@ -1,0 +1,109 @@
+table fichasgest_contrato
+	lineageTag: bc05fd11-8348-4b16-97c8-5ee7f7063b88
+
+	/// Identificador único del contrato.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a9eda65-b470-4640-8db1-1ba962f87577
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del responsable administrativo del contrato.
+	column administrador_de_contrato
+		dataType: string
+		lineageTag: 21bb6351-9d18-46d5-bd65-3ab22eb7d31f
+		summarizeBy: none
+		sourceColumn: administrador_de_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de inicio de vigencia del contrato.
+	column fecha_inicio_contrato
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e86d8ae1-d4d5-4984-8d3b-36ccb169c78a
+		summarizeBy: none
+		sourceColumn: fecha_inicio_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Fecha de vencimiento del contrato.
+	column fecha_vencimiento_contrato
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c8c7a563-b1e4-457e-a6ca-7c805aa11dd6
+		summarizeBy: none
+		sourceColumn: fecha_vencimiento_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Total de horas pactadas en el contrato.
+	column numero_horas
+		dataType: double
+		lineageTag: b865ba4d-ff0e-4f40-a5de-8a6820162c21
+		summarizeBy: sum
+		sourceColumn: numero_horas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Horas restantes registradas en el sistema de origen. Puede diferir del cálculo en Power BI.
+	column horas_restantes
+		dataType: double
+		lineageTag: f3570545-cd5f-4722-baaa-a2014d694be0
+		summarizeBy: sum
+		sourceColumn: horas_restantes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Descripción o comentario asociado al contrato.
+	column detalle
+		dataType: string
+		lineageTag: 5dcd2580-24ca-4bee-a32c-fc10e4b7431a
+		summarizeBy: none
+		sourceColumn: detalle
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_cliente. Identifica el cliente propietario del contrato.
+	column cliente_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9759ad9e-008f-4ccd-8bdd-09fdb545f715
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número o referencia de la factura asociada al contrato.
+	column factura
+		dataType: string
+		lineageTag: 2dea19e7-e74e-4798-b376-04e28ca766fb
+		summarizeBy: none
+		sourceColumn: factura
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_contrato = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_contrato_Table = public_Schema{[Name="fichasgest_contrato",Kind="Table"]}[Data]
+				in
+				    fichasgest_contrato_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,59 @@
+table fichasgest_feriado
+	lineageTag: b7952e75-974f-4825-98c7-4d056aa20c66
+
+	/// Identificador único del feriado.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 900170bd-ba6f-4f95-b6e8-fdd7fe88dffb
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha y hora de inicio del período feriado.
+	column inicio_feriado
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: acbec9c9-1f9c-484e-9a20-98f995cf1f2e
+		summarizeBy: none
+		sourceColumn: inicio_feriado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Fecha y hora de fin del período feriado.
+	column fin_feriado
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: eeb861ad-3319-4483-9d8c-ad61435cf33b
+		summarizeBy: none
+		sourceColumn: fin_feriado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Nombre o descripción del feriado (ej: 'Año Nuevo', 'Navidad').
+	column feriado
+		dataType: string
+		lineageTag: b6b20c85-01de-4b96-833b-30d6001a5ead
+		summarizeBy: none
+		sourceColumn: feriado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_feriado = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_feriado_Table = public_Schema{[Name="fichasgest_feriado",Kind="Table"]}[Data]
+				in
+				    fichasgest_feriado_Table
+
+	annotation PBI_ResultType = Table
+

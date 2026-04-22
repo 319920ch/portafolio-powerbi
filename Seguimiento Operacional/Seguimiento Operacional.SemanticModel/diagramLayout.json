@@ -1,0 +1,178 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1258.4000244140625,
+        "y": 216
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2176,
+            "y": 447
+          },
+          "nodeIndex": "fichasgest_cliente",
+          "nodeLineageTag": "9ff3f082-4ff9-44d4-9476-c5c79dea520f",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 453.12939225076343
+          },
+          "nodeIndex": "fichasgest_contrato",
+          "nodeLineageTag": "bc05fd11-8348-4b16-97c8-5ee7f7063b88",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 201.53003627628368,
+            "y": 166.91034203944139
+          },
+          "nodeIndex": "fichasgest_contrato_horarios",
+          "nodeLineageTag": "0492fefd-f419-482d-b16c-e5c997908ef2",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 273.53003627628368,
+            "y": 634.97113033232972
+          },
+          "nodeIndex": "fichasgest_feriado",
+          "nodeLineageTag": "b7952e75-974f-4825-98c7-4d056aa20c66",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1319,
+            "y": 393.717975274949
+          },
+          "nodeIndex": "fichasgest_ficha",
+          "nodeLineageTag": "9087e8f1-0cac-4861-863e-81eac266a11c",
+          "size": {
+            "height": 416,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "fichasgest_ficha_productos",
+          "nodeLineageTag": "6f5c2491-f4ce-4b06-a916-7aa99043d675",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 150.34792327664195,
+            "y": 404.28005758101995
+          },
+          "nodeIndex": "fichasgest_horario",
+          "nodeLineageTag": "7b1e79df-1d18-4b24-bc15-5db708066283",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 312.06857110476335,
+            "y": 4
+          },
+          "nodeIndex": "fichasgest_productos_soporte",
+          "nodeLineageTag": "e0e3ff89-a627-4e5f-b7e1-5279838944d7",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1398.5300362762837,
+            "y": 0
+          },
+          "nodeIndex": "auth_user",
+          "nodeLineageTag": "17a855a6-7565-479b-8222-65c623a34340",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1717.5300362762837,
+            "y": 333.97113033232972
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "8589259a-0184-4fd0-b7a2-dfc79d5a2067",
+          "size": {
+            "height": 198,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2156,
+            "y": 0
+          },
+          "nodeIndex": "hora_inicio_fin",
+          "nodeLineageTag": "51ba3187-7ccf-4af6-ba08-49c3373cee82",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1920,
+            "y": 686.48556516616486
+          },
+          "nodeIndex": "fichasgest_proyecto",
+          "nodeLineageTag": "6507f8d3-dd85-420b-aa59-e5efebc38eff",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

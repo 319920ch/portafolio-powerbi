@@ -1,0 +1,249 @@
+table fichasgest_ficha
+	lineageTag: 9087e8f1-0cac-4861-863e-81eac266a11c
+
+	/// Mes con mayor total de horas_utilizadas en fichas de servicio. Usa ALL sobre la columna Mes para ignorar filtros de contexto.
+	measure 'Mes Pico' =
+			
+			VAR TablaMeses =
+			    SUMMARIZE(
+			        ALL('fichasgest_ficha'[Mes]),
+			        'fichasgest_ficha'[Mes],
+			        "Horas", SUM('fichasgest_ficha'[horas_utilizadas])
+			    )
+			RETURN
+			MAXX(
+			    FILTER(TablaMeses, [Horas] = MAXX(TablaMeses, [Horas])),
+			    'fichasgest_ficha'[Mes]
+			)
+		displayFolder: Picos y Patrones
+		lineageTag: 5015ce77-8927-4a33-b598-da2cc4bfbd91
+
+	/// Total de horas utilizadas del mes pico de fichas, en valor numérico. Complementa la medida Mes Pico para mostrar la magnitud del pico.
+	measure 'Hora Mes Pico' =
+			
+			VAR TablaMeses =
+			    SUMMARIZE(
+			        ALL('fichasgest_ficha'[Mes]),
+			        'fichasgest_ficha'[Mes],
+			        "Horas", SUM('fichasgest_ficha'[horas_utilizadas])
+			    )
+			RETURN
+			MAXX(TablaMeses, [Horas])
+		formatString: 0
+		displayFolder: Picos y Patrones
+		lineageTag: e58c1869-6d92-4eb9-aca5-4a2e69ec68b2
+
+	/// Texto combinado: nombre del mes pico de fichas + total de horas entre paréntesis. Listo para tarjeta KPI de texto.
+	measure 'KPI Mes Pico' = ```
+			
+			VAR Mes = [Mes Pico]
+			VAR Horas = [Hora Mes Pico]
+			RETURN
+			Mes & " (" & FORMAT(Horas, "#,##0") & ")"
+			
+			```
+		displayFolder: Picos y Patrones
+		lineageTag: e468660f-79eb-45c3-969e-daf689200ee1
+
+	/// Mes con menor total de horas_utilizadas en fichas de servicio. Útil para detectar períodos de baja actividad o meses sin registros.
+	measure 'Mes Más Bajo' = ```
+			
+			VAR TablaMeses =
+			    SUMMARIZE(
+			        ALL('fichasgest_ficha'[Mes]),
+			        'fichasgest_ficha'[Mes],
+			        "Horas", SUM('fichasgest_ficha'[horas_utilizadas])
+			    )
+			RETURN
+			MAXX(
+			    FILTER(TablaMeses, [Horas] = MINX(TablaMeses, [Horas])),
+			    'fichasgest_ficha'[Mes]
+			)
+			
+			```
+		displayFolder: Picos y Patrones
+		lineageTag: 91aeb3c5-eb50-4f75-919e-4e4c2e54d1b2
+
+	/// Total de horas utilizadas del mes con menor actividad, en valor numérico. Complementa la medida Mes Más Bajo.
+	measure 'Horas Mes Bajo' =
+			
+			VAR TablaMeses =
+			    SUMMARIZE(
+			        ALL('fichasgest_ficha'[Mes]),
+			        'fichasgest_ficha'[Mes],
+			        "Horas", SUM('fichasgest_ficha'[horas_utilizadas])
+			    )
+			RETURN
+			MINX(TablaMeses, [Horas])
+		displayFolder: Picos y Patrones
+		lineageTag: 87e0056a-418e-491d-a77f-86a7542ddfd7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Texto combinado: nombre del mes más bajo de fichas + total de horas entre paréntesis. Listo para tarjeta KPI de texto.
+	measure 'KPI Mes Bajo' =
+			
+			VAR Mes = [Mes Más Bajo]
+			VAR Horas = [Horas Mes Bajo]
+			RETURN
+			Mes & " (" & FORMAT(Horas, "#,##0") & ")"
+		displayFolder: Picos y Patrones
+		lineageTag: cdfd04fe-a1b4-464b-bff2-259f4964869d
+
+	/// Identificador único de la ficha de actividad.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: ff7df4c8-e4b0-4c96-8c8b-8115d528d5ad
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Horas efectivamente trabajadas en la actividad.
+	column horas_utilizadas
+		dataType: double
+		lineageTag: 41b896e5-448a-45ae-94e6-ac17c8d5acbf
+		summarizeBy: sum
+		sourceColumn: horas_utilizadas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Horas descontadas del contrato por esta ficha. Base de las medidas de consumo de horas.
+	column horas_debitadas
+		dataType: double
+		lineageTag: 5fb9320b-ab9e-48b2-810e-030ca32454cf
+		summarizeBy: sum
+		sourceColumn: horas_debitadas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha en que se realizó la actividad registrada en la ficha.
+	column fecha_actividad
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 142ba850-5fc6-42e7-bb79-c06e73608a08
+		summarizeBy: none
+		sourceColumn: fecha_actividad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Tipo de ficha de actividad (ej: soporte, proyecto, consultoría).
+	column tipo_ficha
+		dataType: string
+		lineageTag: 42f1dcd9-76d8-4e3b-b088-2bb58c563b2a
+		summarizeBy: none
+		sourceColumn: tipo_ficha
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Descripción del detalle de las horas trabajadas.
+	column detalleHoras
+		dataType: string
+		lineageTag: e45bd1e8-2a59-4233-9c65-680a57aed8ab
+		summarizeBy: none
+		sourceColumn: detalleHoras
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tipo de soporte prestado (ej: remoto, presencial).
+	column tipoSoporte
+		dataType: string
+		lineageTag: f56d4467-4b90-4f12-8bb5-46ae029fe6ce
+		summarizeBy: none
+		sourceColumn: tipoSoporte
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_cliente.
+	column cliente_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a59ee512-2c7a-41f9-a845-72aa5eaef7c5
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_contrato. Contrato contra el que se debitan las horas.
+	column contrato_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 623124e4-4692-467c-8880-f01f2b62f651
+		summarizeBy: sum
+		sourceColumn: contrato_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia auth_user. Ingeniero o consultor que realizó la actividad.
+	column ingeniero_id
+		dataType: int64
+		formatString: 0
+		lineageTag: edf91d15-b6b4-4c3f-b7e7-b0d84ac5d00e
+		summarizeBy: none
+		sourceColumn: ingeniero_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de ticket en Zendesk asociado a la actividad de soporte.
+	column ticket_zendesk
+		dataType: string
+		lineageTag: d4faa665-417a-4aef-80d7-61e96a49ae35
+		summarizeBy: none
+		sourceColumn: ticket_zendesk
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador del proyecto asociado a la ficha (si aplica).
+	column proyecto_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e5077f60-c3b5-44b7-9cfb-a3d2432f61b5
+		summarizeBy: none
+		sourceColumn: proyecto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de la actividad truncada al día (sin hora). Usada para relacionar con Calendario[Fecha].
+	column FechaC = DATEVALUE('fichasgest_ficha'[fecha_actividad])
+		formatString: General Date
+		lineageTag: ac5c4806-9857-4dce-902d-bd283c7e6d8e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del mes de la actividad en texto. Usado para agrupaciones y medidas de pico mensual.
+	column Mes =
+			
+			VAR m =
+			    FORMAT ( [fecha_actividad], "MMMM", "es-ES" )
+			RETURN
+			    UPPER ( LEFT ( m, 1 ) ) &
+			    RIGHT ( m, LEN ( m ) - 1 )
+		lineageTag: 10479f54-b125-44c8-a9c8-d2b63dfa1ab1
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_ficha = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_ficha_Table = public_Schema{[Name="fichasgest_ficha",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(fichasgest_ficha_Table,{"emailContacto", "detalle", "horas_a_debitar", "nombreContacto"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

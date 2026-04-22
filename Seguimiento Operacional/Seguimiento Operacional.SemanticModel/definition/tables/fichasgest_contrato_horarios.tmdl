@@ -1,0 +1,46 @@
+table fichasgest_contrato_horarios
+	lineageTag: 0492fefd-f419-482d-b16c-e5c997908ef2
+
+	/// Identificador único del registro de relación entre contrato y horario.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ab6979e-94b8-4dfa-9553-8825680e8547
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_contrato. Contrato al que aplica el horario.
+	column contrato_id
+		dataType: int64
+		formatString: 0
+		lineageTag: cc7fcdb1-a9aa-46eb-9086-069631af3c22
+		summarizeBy: none
+		sourceColumn: contrato_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_horario. Horario asignado al contrato.
+	column horario_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ce193cc4-c8bf-4b17-95c2-1c728ab43e6e
+		summarizeBy: none
+		sourceColumn: horario_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_contrato_horarios = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_contrato_horarios_Table = public_Schema{[Name="fichasgest_contrato_horarios",Kind="Table"]}[Data]
+				in
+				    fichasgest_contrato_horarios_Table
+
+	annotation PBI_ResultType = Table
+
