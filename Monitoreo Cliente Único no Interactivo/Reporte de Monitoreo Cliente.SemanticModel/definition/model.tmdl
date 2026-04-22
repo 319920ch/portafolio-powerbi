@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["repo tablespaces","repo servidor","repo rman","repo disco","repo bddsize"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_31f72808-7522-4f01-814d-2bef55fcd2a4
+ref table 'repo tablespaces'
+ref table LocalDateTable_081e561a-f4c8-4385-a858-ee9da9f837c7
+ref table 'repo servidor'
+ref table 'repo rman'
+ref table LocalDateTable_d0307436-e7ee-400d-b654-7c81465e7015
+ref table 'repo disco'
+ref table LocalDateTable_ca95b1e8-65b9-478c-b959-be4e2234af86
+ref table 'repo bddsize'
+ref table LocalDateTable_b308cba4-aa1f-483d-b6e1-edb23933f52b
+
+ref cultureInfo en-US
+

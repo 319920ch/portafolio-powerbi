@@ -1,0 +1,40 @@
+relationship e0a2f19b-4245-4050-8293-b1444cafe86a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'repo tablespaces'.fecha
+	toColumn: LocalDateTable_081e561a-f4c8-4385-a858-ee9da9f837c7.Date
+
+relationship 2fdd6618-f6ee-4af6-9daf-d40bf1f527f7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'repo rman'.fechainicio
+	toColumn: LocalDateTable_d0307436-e7ee-400d-b654-7c81465e7015.Date
+
+relationship cfa52cda-a724-4ce0-9ea7-c3bf1081fdc8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'repo disco'.fecha
+	toColumn: LocalDateTable_ca95b1e8-65b9-478c-b959-be4e2234af86.Date
+
+relationship 87c3e3e1-5425-4297-befd-d4621aa0a603
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'repo bddsize'.fecha
+	toColumn: LocalDateTable_b308cba4-aa1f-483d-b6e1-edb23933f52b.Date
+
+relationship AutoDetected_6601040a-c669-4cfe-a653-d60b1bf154ca
+	isActive: false
+	fromColumn: 'repo tablespaces'.ip
+	toColumn: 'repo servidor'.ip
+
+relationship AutoDetected_0b980d24-9942-4e53-97dc-c5f8e0623c95
+	isActive: false
+	fromColumn: 'repo rman'.ip
+	toColumn: 'repo servidor'.ip
+
+relationship AutoDetected_6f9739cc-b756-4a3e-a4e4-5120976de1b4
+	isActive: false
+	fromColumn: 'repo disco'.ip
+	toColumn: 'repo servidor'.ip
+
+relationship AutoDetected_57a55c37-0bd6-422a-8710-cd73954c6cee
+	isActive: false
+	fromColumn: 'repo bddsize'.ip
+	toColumn: 'repo servidor'.ip
+

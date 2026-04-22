@@ -1,0 +1,96 @@
+table 'repo bddsize'
+	lineageTag: 02e5d01c-e675-4eb0-835e-2432a8b4511e
+
+	column ip
+		dataType: string
+		lineageTag: 95904edb-87d5-4111-82e8-62990a5f0420
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		lineageTag: d1bb98c8-93a5-4996-89fd-879c370f40fd
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamano
+		dataType: double
+		lineageTag: b33d1a58-8843-4a11-95d5-49612e5dea39
+		summarizeBy: sum
+		sourceColumn: tamano
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 998554bc-63ed-4fd7-9fc3-3ba14a94a3b7
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: 87c3e3e1-5425-4297-befd-d4621aa0a603
+			defaultHierarchy: LocalDateTable_b308cba4-aa1f-483d-b6e1-edb23933f52b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 98189183-b5e2-4e09-9bc5-df05e7a7e783
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeM = 'repo bddsize'[tamano]/1024
+		lineageTag: 93525815-b207-45d2-adfb-9e263fe4bdcb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SizeGB = 'repo bddsize'[tamano]/1024/1024
+		lineageTag: 204c1eea-b38e-4e58-8c0e-cbf46c435b76
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NombreMes = FORMAT('repo bddsize'[fecha], "MMMM", "es-ES")
+		lineageTag: 7399290c-d9c6-4a61-8fb0-07a9d7d415d0
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero = MONTH('repo bddsize'[fecha])
+		formatString: 0
+		lineageTag: abd4c863-50a4-4679-bba0-8785cecc71d4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo bddsize' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("10.10.0.20", "clientes"),
+				    repo_bddsize = Origen{[Schema="repo",Item="bddsize"]}[Data]
+				in
+				    repo_bddsize
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

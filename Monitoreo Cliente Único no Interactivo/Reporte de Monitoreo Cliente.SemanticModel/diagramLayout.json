@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 4
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 10,
+            "y": 280.58494925144385
+          },
+          "nodeIndex": "repo bddsize",
+          "nodeLineageTag": "02e5d01c-e675-4eb0-835e-2432a8b4511e",
+          "size": {
+            "height": 294,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 608.02410302737076,
+            "y": 317.18212396078064
+          },
+          "nodeIndex": "repo disco",
+          "nodeLineageTag": "0a048e43-2602-49cb-8b41-0bdcfaa35f75",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 321.43115594988365,
+            "y": 543.25681975823022
+          },
+          "nodeIndex": "repo rman",
+          "nodeLineageTag": "a8f62142-7dc2-4025-a847-0314a0fea2b1",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 295.9846325694416,
+            "y": 314.54679684338652
+          },
+          "nodeIndex": "repo servidor",
+          "nodeLineageTag": "66940921-e5a5-4154-835b-b84206241e62",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 389.15071174492255,
+            "y": -10
+          },
+          "nodeIndex": "repo tablespaces",
+          "nodeLineageTag": "e3d0022c-9112-4640-b928-7e5f41627c68",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

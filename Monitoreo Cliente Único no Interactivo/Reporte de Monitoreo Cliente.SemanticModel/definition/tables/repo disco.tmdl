@@ -1,0 +1,123 @@
+table 'repo disco'
+	lineageTag: 0a048e43-2602-49cb-8b41-0bdcfaa35f75
+
+	column ip
+		dataType: string
+		lineageTag: e8a4d29c-47bf-4a0b-8b00-2cc3b622cdea
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		lineageTag: 048b62bb-1f3f-4254-8a7a-aa552caa2c83
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column total
+		dataType: double
+		lineageTag: 93df9356-c401-496b-ad4e-511bc8a6aa24
+		summarizeBy: sum
+		sourceColumn: total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column usado
+		dataType: double
+		lineageTag: 205dcbe3-2ff6-4466-9086-b1f200b03722
+		summarizeBy: sum
+		sourceColumn: usado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 728214a4-3a72-4ef1-a230-eb73c954f0b7
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: cfa52cda-a724-4ce0-9ea7-c3bf1081fdc8
+			defaultHierarchy: LocalDateTable_ca95b1e8-65b9-478c-b959-be4e2234af86.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column pmontaje
+		dataType: string
+		lineageTag: 2a42e7b2-3520-4f4f-b08b-8db18ce05374
+		summarizeBy: none
+		sourceColumn: pmontaje
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 1dfdbbe4-c6b6-456e-a754-a7a7629d62c1
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalMB = 'repo disco'[total] /1024
+		lineageTag: a5ee93f7-aa89-49d4-a267-ac49910d786a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UsadoMB = 'repo disco'[usado]/1024
+		lineageTag: 05a0bc42-5e2f-4d96-a318-e08e74cfc03b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UsadoGB = 'repo disco'[UsadoMB]/1024
+		lineageTag: 7d66b2ad-9ddf-45e5-a8f6-9374a4207d00
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NombreMes = FORMAT('repo disco'[fecha], "MMMM", "es-ES")
+		lineageTag: e9631843-b440-4a35-b0a3-78417d96eb86
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero = MONTH('repo disco'[fecha])
+		formatString: 0
+		lineageTag: 2528f6cb-eadc-43ae-8bae-c0946e652307
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo disco' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("10.10.0.20", "clientes"),
+				    repo_disco = Origen{[Schema="repo",Item="disco"]}[Data],
+				    #"Tipo cambiado con configuración regional" = Table.TransformColumnTypes(repo_disco, {{"fecha", type datetime}}, "es-EC")
+				in
+				    #"Tipo cambiado con configuración regional"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

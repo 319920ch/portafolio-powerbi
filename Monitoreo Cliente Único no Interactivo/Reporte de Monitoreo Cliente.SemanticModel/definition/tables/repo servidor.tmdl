@@ -1,0 +1,74 @@
+table 'repo servidor'
+	lineageTag: 66940921-e5a5-4154-835b-b84206241e62
+
+	column ip
+		dataType: string
+		lineageTag: 82d53d98-9307-4af2-8b2d-85460faccaec
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column so
+		dataType: string
+		lineageTag: 64262af8-0b37-412e-9e3f-c2f09fa581ae
+		summarizeBy: none
+		sourceColumn: so
+
+		annotation SummarizationSetBy = Automatic
+
+	column hostname
+		dataType: string
+		lineageTag: 6c8f233f-6626-4724-bece-4da034aed245
+		summarizeBy: none
+		sourceColumn: hostname
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 97795d2f-d218-474b-8284-60d9640ee5fd
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column versiondb
+		dataType: string
+		lineageTag: acfaa76f-0b37-442d-93ef-234bbff44a74
+		summarizeBy: none
+		sourceColumn: versiondb
+
+		annotation SummarizationSetBy = Automatic
+
+	column basedatos
+		dataType: string
+		lineageTag: 70ee1ab2-fb1a-4f66-a35c-45e435b33620
+		summarizeBy: none
+		sourceColumn: basedatos
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion
+		dataType: string
+		lineageTag: 87bba383-40e9-437a-b9ce-62e48ada7123
+		summarizeBy: none
+		sourceColumn: ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo servidor' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("10.10.0.20", "clientes"),
+				    repo_servidor = Origen{[Schema="repo",Item="servidor"]}[Data],
+				    #"Valor reemplazado" = Table.ReplaceValue(repo_servidor,"tvcable","Xtrim",Replacer.ReplaceText,{"cliente"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado","/32","",Replacer.ReplaceText,{"ip"})
+				in
+				    #"Valor reemplazado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

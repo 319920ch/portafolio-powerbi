@@ -1,0 +1,4474 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "repo_tablespace": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "repo tablespace": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.ip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "ip"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ip": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.sid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "sid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.tablespace": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "tablespace"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tablespace": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.tamano_max": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "tamano_max"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamano max": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tamano_max": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tamano maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.fecha.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.fecha.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.fecha.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.fecha.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.fecha.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_tablespace.tamano_usado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "tamano_usado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamano usado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tamano_usado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.max_pct_usado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "max_pct_usado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max pct usado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "max_pct_usado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "maximum pct usado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semana": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.tamaño_usado_GB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "tamaño_usado_GB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamaño usado GB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tamaño_usado_GB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "repo servidor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.ip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "ip"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ip": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.so": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "so"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "so": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.hostname": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "hostname"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hostname": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "repo rman": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.ip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "ip"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ip": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.sid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "sid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.tamanomb": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "tamanomb"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamanomb": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.completado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "completado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "completado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.fechainicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "fechainicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "Fecha": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.fechainicio.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "VariationSource": "fechainicio",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.fechainicio.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "VariationSource": "fechainicio",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechainicio yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.fechainicio.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "VariationSource": "fechainicio",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechainicio qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.fechainicio.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "VariationSource": "fechainicio",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fechainicio mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.fechainicio.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "VariationSource": "fechainicio",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechainicio day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_rman.tiempoejecucion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "tiempoejecucion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiempoejecucion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.tiporman": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "tiporman"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiporman": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.tiempo_hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "TiempoHoras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiempo hora": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TiempoHoras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.tamano_GB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "tamanoGB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamano GB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tamanoGB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "repo disco": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "disco": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "repo bop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "repo dance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "repo party": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "repo rave": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "repo ball": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "bop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "party": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "rave": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ball": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.ip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "ip"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ip": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.unidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "unidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.usado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "usado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "usado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.fecha.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.fecha.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.fecha.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.fecha.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.fecha.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_disco.pmontaje": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "pmontaje"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pmontaje": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Punto de montaje": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.total_MB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "TotalMB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total MB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalMB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "MB": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate mb": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall mb": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.usado_MB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "UsadoMB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "usado MB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UsadoMB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.usado_GB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "UsadoGB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "usado GB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "UsadoGB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "repo bddsize": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.ip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "ip"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ip": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.sid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "sid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.tamano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "tamano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tamano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.fecha.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.fecha.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.fecha.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.fecha.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.fecha.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "VariationSource": "fecha",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "repo_bddsize.cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.size_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "SizeM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SizeM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.size_GB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "SizeGB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size GB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SizeGB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "GB": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.nombre_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "NombreMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_tablespace.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo tablespaces",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.nombre_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "NombreMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "repo_disco.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo disco",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.nombre_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "NombreMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "repo_bddsize.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo bddsize",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "repo_rman.nombre_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo rman",
+			          "ConceptualProperty": "NombreMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NombreMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.versiondb": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "versiondb"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "versiondb": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.basedato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "basedatos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "basedato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "repo_servidor.ubicacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "repo servidor",
+			          "ConceptualProperty": "ubicacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ubicacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "repo_bddsize_fecha_date_hierarchy_has_repo_bddsize_fecha_day": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_bddsize.fecha.day": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_fecha_date_hierarchy_has_repo_bddsize_fecha_month": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_bddsize.fecha.month": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_fecha_date_hierarchy_has_repo_bddsize_fecha_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_bddsize.fecha.quarter": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_fecha_date_hierarchy_has_repo_bddsize_fecha_year": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_bddsize.fecha.year": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_fecha_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize.fecha": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha"
+			          }
+			        },
+			        "repo_bddsize.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize.fecha"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_fecha_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "repo_disco_fecha_date_hierarchy_has_repo_disco_fecha_day": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_disco.fecha.day": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days1"
+			        }
+			      ]
+			    },
+			    "repo_disco_fecha_date_hierarchy_has_repo_disco_fecha_month": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_disco.fecha.month": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months1"
+			        }
+			      ]
+			    },
+			    "repo_disco_fecha_date_hierarchy_has_repo_disco_fecha_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_disco.fecha.quarter": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters1"
+			        }
+			      ]
+			    },
+			    "repo_disco_fecha_date_hierarchy_has_repo_disco_fecha_year": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_disco.fecha.year": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years1"
+			        }
+			      ]
+			    },
+			    "repo_disco_fecha_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco.fecha": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha"
+			          }
+			        },
+			        "repo_disco.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco.fecha"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_fecha_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "repo_rman_fechainicio_date_hierarchy_has_repo_rman_fechainicio_day": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman.fechainicio.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.date_hierarchy"
+			          }
+			        },
+			        "repo_rman.fechainicio.day": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman.fechainicio.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechainicio_date_hierarchies_have_fechainicio_days"
+			        }
+			      ]
+			    },
+			    "repo_rman_fechainicio_date_hierarchy_has_repo_rman_fechainicio_month": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman.fechainicio.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.date_hierarchy"
+			          }
+			        },
+			        "repo_rman.fechainicio.month": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman.fechainicio.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechainicio_date_hierarchies_have_fechainicio_months"
+			        }
+			      ]
+			    },
+			    "repo_rman_fechainicio_date_hierarchy_has_repo_rman_fechainicio_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman.fechainicio.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.date_hierarchy"
+			          }
+			        },
+			        "repo_rman.fechainicio.quarter": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman.fechainicio.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechainicio_date_hierarchies_have_fechainicio_quarters"
+			        }
+			      ]
+			    },
+			    "repo_rman_fechainicio_date_hierarchy_has_repo_rman_fechainicio_year": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman.fechainicio.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.date_hierarchy"
+			          }
+			        },
+			        "repo_rman.fechainicio.year": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman.fechainicio.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechainicio_date_hierarchies_have_fechainicio_years"
+			        }
+			      ]
+			    },
+			    "repo_rman_fechainicio_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman.fechainicio": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio"
+			          }
+			        },
+			        "repo_rman.fechainicio.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman.fechainicio"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechainicios_have_fechainicio_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_fecha_date_hierarchy_has_repo_tablespace_fecha_day": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_tablespace.fecha.day": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_days2"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_fecha_date_hierarchy_has_repo_tablespace_fecha_month": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_tablespace.fecha.month": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_months2"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_fecha_date_hierarchy_has_repo_tablespace_fecha_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_tablespace.fecha.quarter": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_quarters2"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_fecha_date_hierarchy_has_repo_tablespace_fecha_year": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.date_hierarchy"
+			          }
+			        },
+			        "repo_tablespace.fecha.year": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace.fecha.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_date_hierarchies_have_fecha_years2"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_fecha_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace.fecha": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha"
+			          }
+			        },
+			        "repo_tablespace.fecha.date_hierarchy": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace.fecha"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_fecha_date_hierarchies2"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_ubicacion": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.ubicacion": {
+			          "Target": {
+			            "Entity": "repo_servidor.ubicacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.ubicacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_ubicacions"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_basedato": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.basedato": {
+			          "Target": {
+			            "Entity": "repo_servidor.basedato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.basedato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_basedatos"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_versiondb": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.versiondb": {
+			          "Target": {
+			            "Entity": "repo_servidor.versiondb"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.versiondb"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_versiondbs"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_nombre_me": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.nombre_me": {
+			          "Target": {
+			            "Entity": "repo_rman.nombre_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.nombre_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_nombre_me"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.mes_numero": {
+			          "Target": {
+			            "Entity": "repo_bddsize.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_nombre_me": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.nombre_me": {
+			          "Target": {
+			            "Entity": "repo_bddsize.nombre_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.nombre_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_nombre_me"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.mes_numero": {
+			          "Target": {
+			            "Entity": "repo_disco.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_nombre_me": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.nombre_me": {
+			          "Target": {
+			            "Entity": "repo_disco.nombre_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.nombre_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_nombre_me"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.mes_numero": {
+			          "Target": {
+			            "Entity": "repo_rman.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.mes_numero": {
+			          "Target": {
+			            "Entity": "repo_tablespace.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_nombre_me": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.nombre_me": {
+			          "Target": {
+			            "Entity": "repo_tablespace.nombre_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.nombre_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_nombre_me"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_size_GB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.size_GB": {
+			          "Target": {
+			            "Entity": "repo_bddsize.size_GB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.size_GB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_size_GB"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_size_M": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.size_M": {
+			          "Target": {
+			            "Entity": "repo_bddsize.size_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.size_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_size_M"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.cliente": {
+			          "Target": {
+			            "Entity": "repo_bddsize.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_clientes"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.fecha": {
+			          "Target": {
+			            "Entity": "repo_bddsize.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_fechas"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_tamano": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.tamano": {
+			          "Target": {
+			            "Entity": "repo_bddsize.tamano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.tamano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_tamanos"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_sid": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.sid": {
+			          "Target": {
+			            "Entity": "repo_bddsize.sid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.sid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_sid"
+			        }
+			      ]
+			    },
+			    "repo_bddsize_has_ip": {
+			      "Binding": {
+			        "ConceptualEntity": "repo bddsize"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_bddsize": {
+			          "Target": {
+			            "Entity": "repo_bddsize"
+			          }
+			        },
+			        "repo_bddsize.ip": {
+			          "Target": {
+			            "Entity": "repo_bddsize.ip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_bddsize"
+			            },
+			            "Object": {
+			              "Role": "repo_bddsize.ip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_bddsizes_have_ip"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_usado_GB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.usado_GB": {
+			          "Target": {
+			            "Entity": "repo_disco.usado_GB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.usado_GB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_usado_GB"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_usado_MB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.usado_MB": {
+			          "Target": {
+			            "Entity": "repo_disco.usado_MB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.usado_MB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_usado_MB"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_total_MB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.total_MB": {
+			          "Target": {
+			            "Entity": "repo_disco.total_MB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.total_MB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_total_MB"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.cliente": {
+			          "Target": {
+			            "Entity": "repo_disco.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_clientes"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_pmontaje": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.pmontaje": {
+			          "Target": {
+			            "Entity": "repo_disco.pmontaje"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.pmontaje"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_pmontajes"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.fecha": {
+			          "Target": {
+			            "Entity": "repo_disco.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_fechas"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_usado": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.usado": {
+			          "Target": {
+			            "Entity": "repo_disco.usado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.usado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_usados"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_total": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.total": {
+			          "Target": {
+			            "Entity": "repo_disco.total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_totals"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_unidad": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.unidad": {
+			          "Target": {
+			            "Entity": "repo_disco.unidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.unidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_unidads"
+			        }
+			      ]
+			    },
+			    "repo_disco_has_ip": {
+			      "Binding": {
+			        "ConceptualEntity": "repo disco"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_disco": {
+			          "Target": {
+			            "Entity": "repo_disco"
+			          }
+			        },
+			        "repo_disco.ip": {
+			          "Target": {
+			            "Entity": "repo_disco.ip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_disco"
+			            },
+			            "Object": {
+			              "Role": "repo_disco.ip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_discos_have_ip"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_tamano_GB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.tamano_GB": {
+			          "Target": {
+			            "Entity": "repo_rman.tamano_GB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.tamano_GB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_tamano_GB"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_tiempo_hora": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.tiempo_hora": {
+			          "Target": {
+			            "Entity": "repo_rman.tiempo_hora"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.tiempo_hora"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_tiempo_horas"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.cliente": {
+			          "Target": {
+			            "Entity": "repo_rman.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_clientes"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_tiporman": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.tiporman": {
+			          "Target": {
+			            "Entity": "repo_rman.tiporman"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.tiporman"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_tipormans"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_tiempoejecucion": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.tiempoejecucion": {
+			          "Target": {
+			            "Entity": "repo_rman.tiempoejecucion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.tiempoejecucion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_tiempoejecucions"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_fechainicio": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.fechainicio": {
+			          "Target": {
+			            "Entity": "repo_rman.fechainicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.fechainicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_fechainicios"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_completado": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.completado": {
+			          "Target": {
+			            "Entity": "repo_rman.completado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.completado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_completados"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_tamanomb": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.tamanomb": {
+			          "Target": {
+			            "Entity": "repo_rman.tamanomb"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.tamanomb"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_tamanombs"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_sid": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.sid": {
+			          "Target": {
+			            "Entity": "repo_rman.sid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.sid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_sid"
+			        }
+			      ]
+			    },
+			    "repo_rman_has_ip": {
+			      "Binding": {
+			        "ConceptualEntity": "repo rman"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_rman": {
+			          "Target": {
+			            "Entity": "repo_rman"
+			          }
+			        },
+			        "repo_rman.ip": {
+			          "Target": {
+			            "Entity": "repo_rman.ip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_rman"
+			            },
+			            "Object": {
+			              "Role": "repo_rman.ip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_rmans_have_ip"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.cliente": {
+			          "Target": {
+			            "Entity": "repo_servidor.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_clientes"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_hostname": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.hostname": {
+			          "Target": {
+			            "Entity": "repo_servidor.hostname"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.hostname"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_hostnames"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_so": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.so": {
+			          "Target": {
+			            "Entity": "repo_servidor.so"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.so"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_so"
+			        }
+			      ]
+			    },
+			    "repo_servidor_has_ip": {
+			      "Binding": {
+			        "ConceptualEntity": "repo servidor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_servidor": {
+			          "Target": {
+			            "Entity": "repo_servidor"
+			          }
+			        },
+			        "repo_servidor.ip": {
+			          "Target": {
+			            "Entity": "repo_servidor.ip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_servidor"
+			            },
+			            "Object": {
+			              "Role": "repo_servidor.ip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_servidors_have_ip"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_tamaño_usado_GB": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.tamaño_usado_GB": {
+			          "Target": {
+			            "Entity": "repo_tablespace.tamaño_usado_GB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.tamaño_usado_GB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_tamaño_usado_GB"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.semana": {
+			          "Target": {
+			            "Entity": "repo_tablespace.semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_semanas"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.cliente": {
+			          "Target": {
+			            "Entity": "repo_tablespace.cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_clientes"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_max_pct_usado": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.max_pct_usado": {
+			          "Target": {
+			            "Entity": "repo_tablespace.max_pct_usado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.max_pct_usado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_max_pct_usados"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_tamano_usado": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.tamano_usado": {
+			          "Target": {
+			            "Entity": "repo_tablespace.tamano_usado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.tamano_usado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_tamano_usados"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.fecha": {
+			          "Target": {
+			            "Entity": "repo_tablespace.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_fechas"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_tamano_max": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.tamano_max": {
+			          "Target": {
+			            "Entity": "repo_tablespace.tamano_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.tamano_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_tamano_maxes"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_tablespace": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace.tablespace"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.tablespace"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_tablespaces"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_sid": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.sid": {
+			          "Target": {
+			            "Entity": "repo_tablespace.sid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.sid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_sid"
+			        }
+			      ]
+			    },
+			    "repo_tablespace_has_ip": {
+			      "Binding": {
+			        "ConceptualEntity": "repo tablespaces"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "repo_tablespace": {
+			          "Target": {
+			            "Entity": "repo_tablespace"
+			          }
+			        },
+			        "repo_tablespace.ip": {
+			          "Target": {
+			            "Entity": "repo_tablespace.ip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "repo_tablespace"
+			            },
+			            "Object": {
+			              "Role": "repo_tablespace.ip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "repo_tablespaces_have_ip"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,124 @@
+table 'repo rman'
+	lineageTag: a8f62142-7dc2-4025-a847-0314a0fea2b1
+
+	column ip
+		dataType: string
+		lineageTag: 28e05bfa-57be-4f97-b196-c25feb5691ae
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		lineageTag: ea436ad2-e354-429c-8b1c-f13d507403a3
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamanomb
+		dataType: double
+		lineageTag: b9657d65-f689-45e6-88dc-1a73189a6e6f
+		summarizeBy: none
+		sourceColumn: tamanomb
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column completado
+		dataType: string
+		lineageTag: 76b54063-b253-4240-8f7b-0df51aef22f4
+		summarizeBy: none
+		sourceColumn: completado
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechainicio
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 4458cb57-d610-4bad-857e-3e898ad1aa0e
+		summarizeBy: none
+		sourceColumn: fechainicio
+
+		variation Variación
+			isDefault
+			relationship: 2fdd6618-f6ee-4af6-9daf-d40bf1f527f7
+			defaultHierarchy: LocalDateTable_d0307436-e7ee-400d-b654-7c81465e7015.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column tiempoejecucion
+		dataType: double
+		lineageTag: d3e3d9d3-4747-4cf6-aefd-be4056d71455
+		summarizeBy: sum
+		sourceColumn: tiempoejecucion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tiporman
+		dataType: string
+		lineageTag: 564ec52a-66b9-45e9-9275-6ff0c57fbb16
+		summarizeBy: none
+		sourceColumn: tiporman
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 727a9586-a25c-473f-81d7-2d91770c6daa
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column TiempoHoras = 'repo rman'[tiempoejecucion]/60/60
+		lineageTag: 090aa5e6-54a3-46e7-a451-7cba37827cc6
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tamanoGB = 'repo rman'[tamanomb]/1024
+		lineageTag: c0637742-4113-467e-bedf-0997c894028a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MesNumero = MONTH('repo rman'[fechainicio])
+		formatString: 0
+		lineageTag: 7c165ff2-6f0a-497f-a4aa-b2674ccf462a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreMes = FORMAT('repo rman'[fechainicio], "MMMM", "es-ES")
+		lineageTag: 88c9ae58-9126-4daf-9f6d-86f75a5f3bc4
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo rman' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("10.10.0.20", "clientes"),
+				    repo_rman = Origen{[Schema="repo",Item="rman"]}[Data]
+				in
+				    repo_rman
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,123 @@
+table 'repo tablespaces'
+	lineageTag: e3d0022c-9112-4640-b928-7e5f41627c68
+
+	column ip
+		dataType: string
+		lineageTag: 4196770e-a44e-4eaa-8227-a2a1a03c5cd6
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column sid
+		dataType: string
+		lineageTag: 0facc741-7aef-49fe-afc1-ca8a6d1a257b
+		summarizeBy: none
+		sourceColumn: sid
+
+		annotation SummarizationSetBy = Automatic
+
+	column tablespace
+		dataType: string
+		lineageTag: 3f97ea2c-616a-4dbf-bc5f-4fc554263757
+		summarizeBy: none
+		sourceColumn: tablespace
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamano_max
+		dataType: double
+		lineageTag: 3e8084bd-45eb-4d57-82ca-511eb7c40e70
+		summarizeBy: sum
+		sourceColumn: tamano_max
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d5ed9d30-c82b-4482-aa2a-2fa6372f11cb
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: e0a2f19b-4245-4050-8293-b1444cafe86a
+			defaultHierarchy: LocalDateTable_081e561a-f4c8-4385-a858-ee9da9f837c7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamano_usado
+		dataType: double
+		lineageTag: 46fd731d-7ef1-40a3-a107-66b438bb3671
+		summarizeBy: sum
+		sourceColumn: tamano_usado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_pct_usado
+		dataType: double
+		lineageTag: 5aec83e7-e92b-4c68-97c5-6c51ad158971
+		summarizeBy: sum
+		sourceColumn: max_pct_usado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cliente
+		dataType: string
+		lineageTag: 6ddefea3-eb41-4922-a056-696358858480
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana = WEEKNUM('repo tablespaces'[fecha])
+		formatString: 0
+		lineageTag: 93090534-afc0-419c-8a50-fd7e5611d307
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamaño_usado_GB = 'repo tablespaces'[tamano_usado]/1024
+		lineageTag: 60efe0a1-0f61-42ad-8363-bc42d561f9b9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NombreMes = FORMAT('repo tablespaces'[fecha], "MMMM", "es-ES")
+		lineageTag: 55b3fdd7-d00b-41d1-a381-4cab68f2f4ab
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero = MONTH('repo tablespaces'[fecha])
+		formatString: 0
+		lineageTag: 7d9cf8a1-2a6f-4427-baca-df5e9ab10b65
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'repo tablespaces' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("10.10.0.20", "clientes"),
+				    repo_tablespaces = Origen{[Schema="repo",Item="tablespaces"]}[Data]
+				in
+				    repo_tablespaces
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
