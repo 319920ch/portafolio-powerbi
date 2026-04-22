@@ -27,7 +27,7 @@ Herramientas: Power BI, Power Query, DAX
 Valor para el negocio: Centraliza información contractual dispersa y permite anticipar vencimientos y desvíos de horas antes de que se conviertan en un problema.
 
 3. Monitoreo de Base de Datos
-Descripción: Dashboard técnico para el monitoreo continuo de la salud de la base de datos, con foco en uso de tablespaces, espacio de disco y estado de los backups RMAN.
+Descripción: Dashboard técnico para el monitoreo continuo de la salud de la base de datos, con foco en uso de tablespaces, espacio de disco y estado de los backups RMAN. Se presentan dos versiones, una que permite exportar la información en pdf de manera que se abraca toda la informacipon y la versión interativa que usa elementos como bookmarks, tooltips, filtros, etc.
 Qué muestra:
 
 Uso actual y tendencia de crecimiento por tablespace
