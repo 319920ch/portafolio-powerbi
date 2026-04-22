@@ -1,0 +1,57 @@
+relationship df038079-0973-4bda-b91d-d2f35448e01a
+	fromColumn: fichasgest_ficha.ingeniero_id
+	toColumn: auth_user.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship a878d3ac-1f99-46b7-86f8-9e7ef874f573
+	fromColumn: fichasgest_ficha.contrato_id
+	toColumn: fichasgest_contrato.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 464ca9cc-386b-469a-b443-c20e061a2fc3
+	fromColumn: fichasgest_ficha_productos.ficha_id
+	toColumn: fichasgest_ficha.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 50995d57-3ad4-4644-8c35-437b8d2325eb
+	crossFilteringBehavior: bothDirections
+	fromColumn: fichasgest_contrato.cliente_id
+	toColumn: fichasgest_cliente.'cliente id'
+
+	annotation PBI_IsFromSource = FS
+
+relationship 46762b38-d8b4-4da7-a8e5-5d0284e1173c
+	fromColumn: fichasgest_contrato_producto_con_soporte.contrato_id
+	toColumn: fichasgest_contrato.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship ea80ae1b-841e-4f92-9220-126ebc3743d7
+	fromColumn: fichasgest_contrato_producto_con_soporte.productos_soporte_id
+	toColumn: fichasgest_productos_soporte.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 464814b6-e1c4-4f12-94f5-feea4759cbc4
+	fromColumn: fichasgest_ficha_productos.productos_soporte_id
+	toColumn: fichasgest_productos_soporte.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 1aeb4548-fb88-daf2-cf4d-f7b5432fbd43
+	fromColumn: fichasgest_contrato.FechaI
+	toColumn: Calendario.Fecha
+
+relationship 64ccc325-ed18-4f10-05b3-7485da6581f3
+	isActive: false
+	fromColumn: fichasgest_contrato.FechaV
+	toColumn: Calendario.Fecha
+
+relationship 74a1f9c1-6f8f-f9e9-8b23-5b7d2f4025df
+	isActive: false
+	fromColumn: fichasgest_ficha.FechaC
+	toColumn: Calendario.Fecha
+

@@ -1,0 +1,40 @@
+table auth_user
+	lineageTag: 33008d96-1359-4538-aab7-d383f4c2a25c
+
+	/// Identificador único del usuario/consultor en el sistema.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: b40cecfc-8d87-442c-8dde-c59a271169ac
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del consultor o ingeniero asignado. Usado para filtrar y agrupar actividades por responsable.
+	column Consultor
+		dataType: string
+		lineageTag: bbefa73d-da93-41b3-a5cd-33f628b44195
+		summarizeBy: none
+		sourceColumn: Consultor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition auth_user = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    auth_user_Table = public_Schema{[Name="auth_user",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(auth_user_Table,{"password", "last_login", "is_superuser", "username"}),
+				    #"Columna combinada insertada" = Table.AddColumn(#"Columnas quitadas", "Consultor", each Text.Combine({[first_name], " ", [last_name]}), type text),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Columna combinada insertada",{"is_staff", "is_active", "date_joined", "first_name", "last_name", "email"})
+				in
+				    #"Columnas quitadas1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

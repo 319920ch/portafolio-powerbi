@@ -1,0 +1,315 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "39520fad763a5ad716ea",
+  "position": {
+    "x": 854.959795103937,
+    "y": 388.36857466198103,
+    "z": 2000,
+    "height": 321.12454583358152,
+    "width": 414.44278992197269,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_contrato"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "fichasgest_contrato.id",
+              "nativeQueryRef": "Contrato",
+              "displayName": "Contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_cliente"
+                    }
+                  },
+                  "Property": "cliente id"
+                }
+              },
+              "queryRef": "fichasgest_cliente.cliente id",
+              "nativeQueryRef": "cliente id"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fichasgest_contrato"
+                        }
+                      },
+                      "Property": "numero_horas"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fichasgest_contrato.numero_horas)",
+              "nativeQueryRef": "Horas Contrato",
+              "displayName": "Horas Contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_contrato"
+                    }
+                  },
+                  "Property": "fecha_inicio_contrato"
+                }
+              },
+              "queryRef": "fichasgest_contrato.fecha_inicio_contrato",
+              "nativeQueryRef": "Inicio",
+              "displayName": "Inicio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_contrato"
+                    }
+                  },
+                  "Property": "fecha_vencimiento_contrato"
+                }
+              },
+              "queryRef": "fichasgest_contrato.fecha_vencimiento_contrato",
+              "nativeQueryRef": "Vence",
+              "displayName": "Vence"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fichasgest_contrato"
+                    }
+                  },
+                  "Property": "Estado Contrato"
+                }
+              },
+              "queryRef": "fichasgest_contrato.Estado Contrato",
+              "nativeQueryRef": "Estado ",
+              "displayName": "Estado "
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8AD50B'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D3F39B'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D3F39B'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F4F4'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.99730785579823D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fichasgest_contrato.fecha_vencimiento_contrato"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.079484969112D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(fichasgest_contrato.numero_horas)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Contratos'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

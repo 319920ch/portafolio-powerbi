@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "auth_user",
+          "nodeLineageTag": "33008d96-1359-4538-aab7-d383f4c2a25c",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 360.2578168671381
+          },
+          "nodeIndex": "fichasgest_cliente",
+          "nodeLineageTag": "f31757d7-a4d8-42cb-a0c4-30d2f22b6a8c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 288.78241888521575,
+            "y": 407.78921580361066
+          },
+          "nodeIndex": "fichasgest_contrato",
+          "nodeLineageTag": "a03eaa4b-3707-4531-b037-7482b1dde32a",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 845.87101174572888,
+            "y": 527.33988321692118
+          },
+          "nodeIndex": "fichasgest_contrato_producto_con_soporte",
+          "nodeLineageTag": "a1080fb9-b778-44cb-b970-4ac206cb4424",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 294.04404259890407,
+            "y": 0
+          },
+          "nodeIndex": "fichasgest_ficha",
+          "nodeLineageTag": "ad839947-45b3-4547-a330-f16e9327da5e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 707.11060568716675,
+            "y": 0
+          },
+          "nodeIndex": "fichasgest_ficha_productos",
+          "nodeLineageTag": "06e6131a-996a-4b29-b772-26c28b883bff",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 872.880858629133,
+            "y": 237
+          },
+          "nodeIndex": "fichasgest_productos_soporte",
+          "nodeLineageTag": "2af2502c-741f-4fdd-abbf-aebac899949a",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 562.880858629133,
+            "y": 232.12890843356905
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "ff8da9c5-f068-48e3-870b-3994723db0d8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

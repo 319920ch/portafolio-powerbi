@@ -1,0 +1,232 @@
+table fichasgest_ficha
+	lineageTag: ad839947-45b3-4547-a330-f16e9327da5e
+
+	/// Suma total de horas debitadas (descontadas del contrato) en el período filtrado. Base principal de consumo de horas.
+	measure 'Horas Usadas' =
+			
+			SUM('fichasgest_ficha'[horas_debitadas])
+		formatString: 0.00
+		lineageTag: 0ee38145-9d11-466f-a64e-984bd42a9779
+
+	/// Diferencia entre horas contratadas y horas usadas. Indica el saldo de horas disponibles en el contrato.
+	measure 'Horas Restantes' =
+			
+			[Horas Contratadas] - [Horas Usadas]
+		formatString: 0.00
+		lineageTag: 0921eb44-0837-40ac-a0a5-9fd1590976ca
+
+	/// Porcentaje de consumo de horas respecto al total contratado (Horas Usadas / Horas Contratadas). Retorna 0 si no hay horas contratadas.
+	measure '% Consumo' =
+			
+			DIVIDE([Horas Usadas], [Horas Contratadas],0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7a957d74-3ac0-4e9f-8e90-8789628fc75b
+
+	/// Suma de horas debitadas filtrando solo contratos con Estado Contrato = 'Vigente'. Útil para excluir consumo de contratos vencidos del análisis.
+	measure 'Horas Contratadas (Activas - Hoy)' =
+			
+			CALCULATE(
+			    SUM(fichasgest_ficha[horas_debitadas]),
+			    KEEPFILTERS(fichasgest_contrato[Estado Contrato] = "Vigente")
+			)
+		lineageTag: 706b46fb-fc2b-4950-8639-915375363f03
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Suma de horas debitadas cruzando fichas con sus productos asociados mediante TREATAS sobre fichasgest_ficha_productos. Permite analizar el consumo de horas desglosado por producto de soporte.
+	measure 'Horas por Producto y Contrato' =
+			
+			CALCULATE (
+			    SUM ( fichasgest_ficha[horas_debitadas] ),
+			    TREATAS (
+			        VALUES ( fichasgest_ficha_productos[ficha_id] ),
+			        fichasgest_ficha[id]
+			    )
+			)
+		lineageTag: d6193b5d-e64d-4f7e-8472-ad3bef3dafe5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Identificador único de la ficha de actividad.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 65e40b26-5d23-481b-b3c2-fd5bb3134def
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Horas efectivamente trabajadas en la actividad antes de aplicar debitación.
+	column horas_utilizadas
+		dataType: double
+		lineageTag: 8e43d672-6796-4d5b-9ef3-54eb13e0988e
+		summarizeBy: sum
+		sourceColumn: horas_utilizadas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Horas pendientes de debitar al contrato por esta ficha.
+	column horas_a_debitar
+		dataType: double
+		lineageTag: 37e42d26-3e46-4391-be07-0c81571e0cca
+		summarizeBy: sum
+		sourceColumn: horas_a_debitar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Horas ya descontadas del contrato por esta ficha. Base de la medida [Horas Usadas].
+	column horas_debitadas
+		dataType: double
+		lineageTag: 3111c136-28eb-4f94-8669-f05fd0d9fc47
+		summarizeBy: sum
+		sourceColumn: horas_debitadas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Fecha en que se realizó la actividad registrada en la ficha.
+	column fecha_actividad
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b2a8c10a-96ac-4772-b616-c6f6722732ce
+		summarizeBy: none
+		sourceColumn: fecha_actividad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Tipo de ficha de actividad (ej: soporte, proyecto, consultoría).
+	column tipo_ficha
+		dataType: string
+		lineageTag: 9b5cc5d2-f2b3-4276-b7e7-1bc22b19ae3b
+		summarizeBy: none
+		sourceColumn: tipo_ficha
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Descripción del detalle de horas trabajadas en la actividad.
+	column detalleHoras
+		dataType: string
+		lineageTag: d4d00a8e-497a-4c30-93d0-7cf7b0fd7226
+		summarizeBy: none
+		sourceColumn: detalleHoras
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Tipo de soporte prestado en la actividad (ej: remoto, presencial).
+	column tipoSoporte
+		dataType: string
+		lineageTag: 2d5cd9d7-c90f-449c-92b1-fb70a202ea4a
+		summarizeBy: none
+		sourceColumn: tipoSoporte
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_cliente. Cliente al que pertenece la ficha.
+	column cliente_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d559903-2c52-4c60-8218-efcc6f06126d
+		summarizeBy: sum
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_contrato. Contrato contra el que se debitan las horas.
+	column contrato_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e8461e6-4e09-4dc0-885e-a9b72f2f0aa1
+		summarizeBy: none
+		sourceColumn: contrato_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia auth_user. Ingeniero/consultor que realizó la actividad.
+	column ingeniero_id
+		dataType: int64
+		formatString: 0
+		lineageTag: de47004a-1e2a-4d51-bf68-8c7f024f0707
+		summarizeBy: none
+		sourceColumn: ingeniero_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de ticket en Zendesk asociado a la actividad de soporte.
+	column ticket_zendesk
+		dataType: string
+		lineageTag: 8616dea9-0f5a-479c-a639-e06f2cb9976f
+		summarizeBy: none
+		sourceColumn: ticket_zendesk
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador del proyecto asociado a la ficha (si aplica).
+	column proyecto_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b3ee2e41-3a0a-4dde-8306-9078e18c7de9
+		summarizeBy: sum
+		sourceColumn: proyecto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de la actividad truncada al día (sin hora). Usada para relacionar con Calendario[Fecha].
+	column FechaC = DATEVALUE('fichasgest_ficha'[fecha_actividad])
+		formatString: General Date
+		lineageTag: d5aec1ac-74ae-4609-9594-33e6418c7fe5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Año de la actividad en texto. Usado para agrupaciones anuales en visualizaciones.
+	column Año = YEAR(fichasgest_ficha[FechaC])
+		dataType: string
+		lineageTag: 38b4de47-19b0-47bc-8535-59d164d7575c
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de mes de la actividad (1-12). Usado para agrupaciones mensuales.
+	column Mes = MONTH(fichasgest_ficha[FechaC])
+		formatString: 0
+		lineageTag: f5a5ea2d-8486-4382-8625-43c3cdf5c49a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del mes de la actividad (ej: 'Marzo'). Usado como etiqueta en visualizaciones.
+	column 'Mes Nombre' = FORMAT(fichasgest_ficha[FechaC], "MMMM")
+		lineageTag: 89537c99-5bdd-4053-b0e2-ed4af744c0b6
+		summarizeBy: none
+		sortByColumn: Mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_ficha = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_ficha_Table = public_Schema{[Name="fichasgest_ficha",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(fichasgest_ficha_Table,{"emailContacto", "nombreContacto", "detalle"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

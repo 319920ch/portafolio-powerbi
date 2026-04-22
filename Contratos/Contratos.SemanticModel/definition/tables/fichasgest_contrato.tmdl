@@ -1,0 +1,222 @@
+table fichasgest_contrato
+	lineageTag: a03eaa4b-3707-4531-b037-7482b1dde32a
+
+	/// Suma del total de horas pactadas en los contratos (numero_horas). Base para cálculos de consumo y saldo.
+	measure 'Horas Contratadas' =
+			
+			SUM(fichasgest_contrato[numero_horas])
+		formatString: 0.00
+		lineageTag: fc4ac708-0fee-490a-9165-facb62058c23
+
+	/// Etiqueta de estado del contrato basada en la columna calculada Dias Restantes: 'Vencido' (<0 días), 'Por vencer' (≤30 días), 'Vigente'. Usada en tarjetas y visualizaciones de estado.
+	measure 'Estado Contrato Medida' =
+			
+			SWITCH(
+			    TRUE(),
+			    fichasgest_contrato[Dias Restantes] < 0, "Vencido",
+			    fichasgest_contrato[Dias Restantes] <= 30, "Por vencer",
+			    "Vigente"
+			)
+		lineageTag: e14c0043-cee9-4311-afc9-a4b70c2f2818
+
+	/// Días restantes desde hoy hasta la fecha máxima de vencimiento del contrato en el contexto actual. Negativo si el contrato está vencido.
+	measure 'Dias Restantes' =
+			
+			DATEDIFF(
+			    TODAY(),
+			    MAX(fichasgest_contrato[fecha_vencimiento_contrato]),
+			    DAY
+			)
+		formatString: 0
+		lineageTag: c288e34f-f417-45b2-8039-70da97dd900e
+
+	/// Horas restantes (Contratadas - Usadas) solo para contratos cuya fecha de vencimiento es mayor o igual a hoy. Retorna BLANK para contratos vencidos, evitando distorsionar totales.
+	measure 'Horas Restantes Vigentes' =
+			
+			VAR FinContrato =
+			    MAX(fichasgest_contrato[fecha_vencimiento_contrato])
+			
+			RETURN
+			IF(
+			    FinContrato >= TODAY(),
+			    [Horas Contratadas] - [Horas Usadas],
+			    BLANK()
+			)
+		lineageTag: b05cf210-b139-4869-b60f-6548659705d1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Suma de Horas Restantes Vigentes iterando por cada contrato distinto (SUMX sobre VALUES de id). Garantiza que el total no colapse por contexto de filtro al mostrar múltiples contratos.
+	measure 'Horas Vigentes' =
+			
+			SUMX(
+			    VALUES(fichasgest_contrato[id]),
+			    [Horas Restantes Vigentes]
+			)
+		lineageTag: 81321fc9-f58c-4fc1-bbad-7ccbf7103ab7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Identificador único del contrato.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 69b5ad3a-9af7-4f9d-a602-efe2e0633013
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del responsable administrativo del contrato por parte de la empresa.
+	column administrador_de_contrato
+		dataType: string
+		lineageTag: a6ee6f52-f28a-4ae8-8248-b5a1d23ff29f
+		summarizeBy: none
+		sourceColumn: administrador_de_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de inicio de vigencia del contrato en formato DateTime con hora.
+	column fecha_inicio_contrato
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b8bfb5bc-1935-44b4-9277-7cc003629913
+		summarizeBy: none
+		sourceColumn: fecha_inicio_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Fecha de vencimiento del contrato en formato DateTime con hora.
+	column fecha_vencimiento_contrato
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c428e3b1-5919-46a2-bde0-52ecef782689
+		summarizeBy: none
+		sourceColumn: fecha_vencimiento_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Total de horas contratadas pactadas en el contrato.
+	column numero_horas
+		dataType: double
+		lineageTag: 700c5eec-b830-4c72-8808-d869f7e9ac9d
+		summarizeBy: sum
+		sourceColumn: numero_horas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Horas restantes registradas directamente en el sistema de origen. Puede diferir de la medida calculada [Horas Restantes].
+	column horas_restantes
+		dataType: double
+		formatString: 0.00
+		lineageTag: 3d3a084c-811d-4847-a9f2-989bb3b59ca0
+		summarizeBy: sum
+		sourceColumn: horas_restantes
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Descripción o comentario del contrato.
+	column detalle
+		dataType: string
+		lineageTag: e730774d-8183-40a3-a384-608a975191af
+		summarizeBy: none
+		sourceColumn: detalle
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Identificador del cliente al que pertenece el contrato. Clave foránea hacia fichasgest_cliente.
+	column cliente_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b60cde8-f9e0-41b3-89b6-6af29ac4635c
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de inicio del contrato truncada al día (sin hora). Usada para relacionar con Calendario[Fecha].
+	column FechaI = DATEVALUE('fichasgest_contrato'[fecha_inicio_contrato])
+		formatString: Long Date
+		lineageTag: 862ba3b6-b1cf-4c50-9f8c-5b8d4131b3a0
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha de vencimiento del contrato truncada al día (sin hora). Usada para relacionar con Calendario[Fecha] y calcular días restantes.
+	column FechaV = DATEVALUE('fichasgest_contrato'[fecha_vencimiento_contrato])
+		formatString: General Date
+		lineageTag: c70c7a96-be76-4090-b2d2-dc85b4a41bb5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clasificación de vigencia basada en días restantes: 'Vigente', 'Por vencer' (≤30 días) o 'Vencido'. Usada en filtros y visualizaciones de estado.
+	column 'Estado Contrato' =
+			
+			SWITCH(
+			    TRUE(),
+			    fichasgest_contrato[Dias Restantes] < 0, "Vencido",
+			    fichasgest_contrato[Dias Restantes] <= 30, "Por vencer",
+			    "Vigente"
+			)
+		lineageTag: 6b12aaa2-4819-4394-89d9-5baf84958e9a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clasificación del uso de horas del contrato basada en el porcentaje consumido. Complementa Estado Contrato con información de consumo.
+	column 'Estado Contrato Uso' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    
+			    fichasgest_contrato[fecha_vencimiento_contrato] >= TODAY() 
+			        && fichasgest_contrato[horas_restantes] > 0,
+			        "Vigente con horas disponibles",
+			
+			    fichasgest_contrato[fecha_vencimiento_contrato] >= TODAY() 
+			        && fichasgest_contrato[horas_restantes] <= 0,
+			        "Vigente sin horas",
+			
+			    fichasgest_contrato[fecha_vencimiento_contrato] < TODAY() 
+			        && fichasgest_contrato[horas_restantes] > 0,
+			        "Vencido con horas no usadas",
+			
+			    "Vencido todas las horas consumidas"
+			)
+			```
+		lineageTag: f329a5e9-818f-44e5-a952-63dfd6e7d4c0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número o referencia de la factura asociada al contrato.
+	column factura
+		dataType: string
+		lineageTag: a9bead1b-d9a1-4475-910e-2e13edd7ed35
+		summarizeBy: none
+		sourceColumn: factura
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_contrato = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_contrato_Table = public_Schema{[Name="fichasgest_contrato",Kind="Table"]}[Data]
+				in
+				    fichasgest_contrato_Table
+
+	annotation PBI_ResultType = Table
+

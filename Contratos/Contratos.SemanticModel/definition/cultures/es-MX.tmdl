@@ -1,0 +1,4882 @@
+cultureInfo es-MX
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fichasgest_ficha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest ficha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest_ficha": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_ficha.horas_utilizada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "horas_utilizadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas utilizada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora utilizada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_utilizadas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.hora_a_debitar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "horas_a_debitar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hora a debitar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "horas_a_debitar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.horas_debitada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "horas_debitadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas debitada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora debitada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_debitadas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.fecha_actividad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "fecha_actividad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha actividad": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_actividad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_ficha.tipo_ficha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "tipo_ficha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo ficha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_ficha": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.detalle_hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "detalleHoras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "detalle hora": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "detalleHoras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.tipo_soporte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "tipoSoporte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo soporte": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipoSoporte": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.cliente_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "cliente_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cliente_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cliente identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.contrato_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "contrato_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "contrato id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "contrato_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "contrato identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Contrato": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.ingeniero_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "ingeniero_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ingeniero id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ingeniero_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ingeniero identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ingeniero identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ingeniero identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ingeniero credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.ticket_zendesk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "ticket_zendesk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket zendesk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ticket_zendesk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.proyecto_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "proyecto_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "proyecto id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "proyecto_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "proyecto identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "proyecto identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "proyecto identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "proyecto credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.fecha_C": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "FechaC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha C": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaC": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Contrato": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_contrato.administrador_de_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "administrador_de_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "administrador de contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "administrador_de_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.fecha_inicio_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "fecha_inicio_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha inicio contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_inicio_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "Inicio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_contrato.fecha_vencimiento_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "fecha_vencimiento_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha vencimiento contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_vencimiento_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "Vence": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_contrato.numero_hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "numero_horas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero hora": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_horas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.horas_restante": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "horas_restantes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas restante": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora restante": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_restantes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.detalle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "detalle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "detalle": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.cliente_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "cliente_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cliente id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cliente_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cliente identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cliente credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.fecha_I": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "FechaI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha I": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaI": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_contrato.fecha_V": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "FechaV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha V": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaV": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fichasgest_contrato_producto_con_soporte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato_producto_con_soporte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest contrato producto con soporte": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest_contrato_producto_con_soporte": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_producto_con_soporte.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato_producto_con_soporte",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_contrato_producto_con_soporte.contrato_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato_producto_con_soporte",
+			          "ConceptualProperty": "contrato_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "contrato id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "contrato_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "contrato identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "contrato credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_producto_con_soporte.productos_soporte_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato_producto_con_soporte",
+			          "ConceptualProperty": "productos_soporte_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "productos soporte id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "producto soporte id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "productos_soporte_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "producto soporte identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha_productos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest ficha producto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest_ficha_productos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha_productos",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_ficha_producto.ficha_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha_productos",
+			          "ConceptualProperty": "ficha_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ficha id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ficha_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ficha identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ficha identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ficha identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ficha credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto.productos_soporte_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha_productos",
+			          "ConceptualProperty": "productos_soporte_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "productos soporte id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "producto soporte id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "productos_soporte_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "producto soporte identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "producto soporte credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "auth_user": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "auth_user"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "auth user": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "auth_user": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "auth operator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth worker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth employer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth manipulator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth handler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "auth consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "auth customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "auth client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "auth punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "auth_user.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "auth_user",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "auth_user.consultor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "auth_user",
+			          "ConceptualProperty": "Consultor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consultor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest_cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_cliente.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_cliente",
+			          "ConceptualProperty": "cliente id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_cliente.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_cliente",
+			          "ConceptualProperty": "empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_productos_soporte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_productos_soporte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fichasgest productos soporte": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fichasgest producto soporte": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "fichasgest_productos_soporte": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_productos_soporte.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_productos_soporte",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "fichasgest_productos_soporte.producto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_productos_soporte",
+			          "ConceptualProperty": "producto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "producto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calendario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "MesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.año_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "AñoMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AñoMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.año_mes_orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "AñoMesOrden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año mes orden": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "año me orden": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "AñoMesOrden": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.dia_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "DiaMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.dia_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "DiaSemana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.dia_semana_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "DiaSemanaNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemanaNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dia semana number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.es_fin_de_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "EsFinDeMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es fin de me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EsFinDeMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.es_inicio_de_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "EsInicioDeMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es inicio de me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EsInicioDeMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.mes_nombre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Mes Nombre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nombre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nombre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.horas_usadas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Horas Usadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas usadas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.horas_restantes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Horas Restantes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas restantes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Horas No Usadas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.horas_contratadas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Horas Contratadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas contratadas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.consumo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "% Consumo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% consumo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage consumo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct consumo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "% Consumo Horas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.estado_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Estado Contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.horas_contratadas_activas__hoy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Horas Contratadas (Activas - Hoy)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas contratadas (activas - hoy)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "horas contratadas": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "horas contratadas (activas hoy)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.estado_contrato_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Estado Contrato Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado contrato medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.dias_restantes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Dias Restantes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias restantes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.horas_restantes_vigentes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Horas Restantes Vigentes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas restantes vigentes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.horas_vigentes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Horas Vigentes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas vigentes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Hrs Disp": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato.estado_contrato_uso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_contrato",
+			          "ConceptualProperty": "Estado Contrato Uso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado contrato uso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha.horas_por_producto_y_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fichasgest_ficha",
+			          "ConceptualProperty": "Horas por Producto y Contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas por producto y contrato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "fichasgest_ficha_has_auth_user": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "auth_user": {
+			          "Target": {
+			            "Entity": "auth_user"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "auth_user"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_auth_users"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "auth_user"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "auth_users_have_fichasgest_fichas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_por_producto_y_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_por_producto_y_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_por_producto_y_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_por_producto_y_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_por_producto_y_contrato"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_estado_contrato_uso": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.estado_contrato_uso": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.estado_contrato_uso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.estado_contrato_uso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_estado_contrato_usos"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_fichasgest_contrato_horas_vigentes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_contrato.horas_vigentes": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_vigentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_vigentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_vigentes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_horas_vigentes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.horas_vigentes": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_vigentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_vigentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_horas_vigentes"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_fichasgest_contrato_horas_restantes_vigentes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_contrato.horas_restantes_vigentes": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_restantes_vigentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_restantes_vigentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_restantes_vigentes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_horas_restantes_vigentes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.horas_restantes_vigentes": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_restantes_vigentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_restantes_vigentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_horas_restantes_vigentes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_dias_restantes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.dias_restantes": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.dias_restantes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.dias_restantes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_dias_restantes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_estado_contrato_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.estado_contrato_medida": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.estado_contrato_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.estado_contrato_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_estado_contrato_medida"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_contratadas_activas__hoy": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_contratadas_activas__hoy": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_contratadas_activas__hoy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_contratadas_activas__hoy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_contratadas_activas__hoy"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_estado_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.estado_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.estado_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.estado_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_estado_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_consumo": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.consumo": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.consumo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.consumo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have__consumo"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fichasgest_ficha_consumo": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_ficha.consumo": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.consumo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.consumo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have__consumo"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_horas_contratadas": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.horas_contratadas": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_contratadas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_contratadas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_horas_contratadas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_restantes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_restantes": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_restantes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_restantes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_restantes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fichasgest_ficha_horas_restantes": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_ficha.horas_restantes": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_restantes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_restantes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_horas_restantes"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_usadas": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_usadas": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_usadas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_usadas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_usadas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_mes_nombre": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.mes_nombre": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.mes_nombre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.mes_nombre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_mes_nombres"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.me": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_me"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.año": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_años"
+			        }
+			      ]
+			    },
+			    "calendario_has_es_inicio_de_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.es_inicio_de_me": {
+			          "Target": {
+			            "Entity": "calendario.es_inicio_de_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.es_inicio_de_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_es_inicio_de_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_es_fin_de_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.es_fin_de_me": {
+			          "Target": {
+			            "Entity": "calendario.es_fin_de_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.es_fin_de_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_es_fin_de_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_dia_semana_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.dia_semana_num": {
+			          "Target": {
+			            "Entity": "calendario.dia_semana_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.dia_semana_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_dia_semana_nums"
+			        }
+			      ]
+			    },
+			    "calendario_has_dia_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.dia_semana": {
+			          "Target": {
+			            "Entity": "calendario.dia_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.dia_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_dia_semanas"
+			        }
+			      ]
+			    },
+			    "calendario_has_dia_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.dia_me": {
+			          "Target": {
+			            "Entity": "calendario.dia_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.dia_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_dia_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_año_mes_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año_mes_orden": {
+			          "Target": {
+			            "Entity": "calendario.año_mes_orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año_mes_orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_año_mes_ordens"
+			        }
+			      ]
+			    },
+			    "calendario_has_año_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año_me": {
+			          "Target": {
+			            "Entity": "calendario.año_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_año_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.me": {
+			          "Target": {
+			            "Entity": "calendario.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.mes_num": {
+			          "Target": {
+			            "Entity": "calendario.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año": {
+			          "Target": {
+			            "Entity": "calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.fecha": {
+			          "Target": {
+			            "Entity": "calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.date": {
+			          "Target": {
+			            "Entity": "calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "fichasgest_productos_soporte_has_producto": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_productos_soporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_productos_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte"
+			          }
+			        },
+			        "fichasgest_productos_soporte.producto": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte.producto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_productos_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_productos_soporte.producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_productos_soportes_have_productos"
+			        }
+			      ]
+			    },
+			    "fichasgest_productos_soporte_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_productos_soporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_productos_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte"
+			          }
+			        },
+			        "fichasgest_productos_soporte.id": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_productos_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_productos_soporte.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_productos_soportes_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_productos_soporte"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_productos_soporte.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_productos_soportes"
+			        }
+			      ]
+			    },
+			    "fichasgest_cliente_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_cliente": {
+			          "Target": {
+			            "Entity": "fichasgest_cliente"
+			          }
+			        },
+			        "fichasgest_cliente.empresa": {
+			          "Target": {
+			            "Entity": "fichasgest_cliente.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_cliente"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_cliente.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_clientes_have_empresas"
+			        }
+			      ]
+			    },
+			    "fichasgest_cliente_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_cliente": {
+			          "Target": {
+			            "Entity": "fichasgest_cliente"
+			          }
+			        },
+			        "fichasgest_cliente.id": {
+			          "Target": {
+			            "Entity": "fichasgest_cliente.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_cliente"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_cliente.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_clientes_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_cliente"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_cliente.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_clientes"
+			        }
+			      ]
+			    },
+			    "auth_user_has_consultor": {
+			      "Binding": {
+			        "ConceptualEntity": "auth_user"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "auth_user": {
+			          "Target": {
+			            "Entity": "auth_user"
+			          }
+			        },
+			        "auth_user.consultor": {
+			          "Target": {
+			            "Entity": "auth_user.consultor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "auth_user"
+			            },
+			            "Object": {
+			              "Role": "auth_user.consultor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "auth_users_have_consultors"
+			        }
+			      ]
+			    },
+			    "auth_user_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "auth_user"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "auth_user": {
+			          "Target": {
+			            "Entity": "auth_user"
+			          }
+			        },
+			        "auth_user.id": {
+			          "Target": {
+			            "Entity": "auth_user.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "auth_user"
+			            },
+			            "Object": {
+			              "Role": "auth_user.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "auth_users_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "auth_user"
+			            },
+			            "Name": {
+			              "Role": "auth_user.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_auth_users"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha_productos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha_producto": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha_producto"
+			          }
+			        },
+			        "fichasgest_ficha_producto.id": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha_producto.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha_producto"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha_producto.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_ficha_productos_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha_producto"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_ficha_producto.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_ficha_productos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_producto_con_soporte_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato_producto_con_soporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato_producto_con_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato_producto_con_soporte"
+			          }
+			        },
+			        "fichasgest_contrato_producto_con_soporte.id": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato_producto_con_soporte.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato_producto_con_soporte.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contrato_producto_con_soportes_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_contrato_producto_con_soporte.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_contrato_producto_con_soportes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fecha_V": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.fecha_V": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.fecha_V"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.fecha_V"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fecha_V"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fecha_I": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.fecha_I": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.fecha_I"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.fecha_I"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fecha_Is"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_detalle": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.detalle": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.detalle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.detalle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_detalles"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_horas_restante": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.horas_restante": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.horas_restante"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.horas_restante"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_horas_restantes1"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_numero_hora": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.numero_hora": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.numero_hora"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.numero_hora"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_numero_horas"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fecha_vencimiento_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.fecha_vencimiento_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.fecha_vencimiento_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.fecha_vencimiento_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fecha_vencimiento_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fecha_inicio_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.fecha_inicio_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.fecha_inicio_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.fecha_inicio_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fecha_inicio_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_administrador_de_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.administrador_de_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.administrador_de_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.administrador_de_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_administrador_de_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_contrato.id": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_contrato.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_fecha_C": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.fecha_C": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.fecha_C"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.fecha_C"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_fecha_C"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_proyecto_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.proyecto_id": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.proyecto_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.proyecto_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_proyecto_ids"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_ticket_zendesk": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.ticket_zendesk": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.ticket_zendesk"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.ticket_zendesk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_ticket_zendesks"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_cliente_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.cliente_id": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.cliente_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.cliente_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_cliente_ids"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_tipo_soporte": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.tipo_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.tipo_soporte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.tipo_soporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_tipo_soportes"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_detalle_hora": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.detalle_hora": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.detalle_hora"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.detalle_hora"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_detalle_horas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_tipo_ficha": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.tipo_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.tipo_ficha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.tipo_ficha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_tipo_fichas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_fecha_actividad": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.fecha_actividad": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.fecha_actividad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.fecha_actividad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_fecha_actividads"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_debitada": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_debitada": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_debitada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_debitada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_debitadas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_hora_a_debitar": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.hora_a_debitar": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.hora_a_debitar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.hora_a_debitar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_hora_a_debitar"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_horas_utilizada": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.horas_utilizada": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.horas_utilizada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.horas_utilizada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_horas_utilizadas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_detalle": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.detalle": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.detalle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.detalle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_detalles"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_id": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_ficha.id": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha.id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_ids"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Name": {
+			              "Role": "fichasgest_ficha.id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ids_are_names_IDs_of_fichasgest_fichas"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_has_fichasgest_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        },
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_fichasgest_contratos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fichasgest_fichas"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_fichasgest_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "fichasgest_cliente": {
+			          "Target": {
+			            "Entity": "fichasgest_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fichasgest_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_cliente"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_clientes_have_fichasgest_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_has_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        },
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "fecha I": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_fichasgest_contratos"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_producto_con_soporte_has_fichasgest_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato_producto_con_soporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato_producto_con_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato_producto_con_soporte"
+			          }
+			        },
+			        "fichasgest_contrato": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contrato_producto_con_soportes_have_fichasgest_contratos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contratos_have_fichasgest_contrato_producto_con_soportes"
+			        }
+			      ]
+			    },
+			    "fichasgest_contrato_producto_con_soporte_has_fichasgest_productos_soporte": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_contrato_producto_con_soporte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_contrato_producto_con_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_contrato_producto_con_soporte"
+			          }
+			        },
+			        "fichasgest_productos_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_productos_soporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_contrato_producto_con_soportes_have_fichasgest_productos_soportes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_productos_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_contrato_producto_con_soporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_productos_soportes_have_fichasgest_contrato_producto_con_soportes"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto_has_fichasgest_ficha": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha_productos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha_producto": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha_producto"
+			          }
+			        },
+			        "fichasgest_ficha": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha_producto"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_ficha_productos_have_fichasgest_fichas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha_producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_fichas_have_fichasgest_ficha_productos"
+			        }
+			      ]
+			    },
+			    "fichasgest_ficha_producto_has_fichasgest_productos_soporte": {
+			      "Binding": {
+			        "ConceptualEntity": "fichasgest_ficha_productos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fichasgest_ficha_producto": {
+			          "Target": {
+			            "Entity": "fichasgest_ficha_producto"
+			          }
+			        },
+			        "fichasgest_productos_soporte": {
+			          "Target": {
+			            "Entity": "fichasgest_productos_soporte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_ficha_producto"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_productos_soporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_ficha_productos_have_fichasgest_productos_soportes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fichasgest_productos_soporte"
+			            },
+			            "Object": {
+			              "Role": "fichasgest_ficha_producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fichasgest_productos_soportes_have_fichasgest_ficha_productos"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

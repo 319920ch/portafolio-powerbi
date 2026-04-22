@@ -1,0 +1,39 @@
+table fichasgest_cliente
+	lineageTag: f31757d7-a4d8-42cb-a0c4-30d2f22b6a8c
+
+	/// Identificador único del cliente.
+	column 'cliente id'
+		dataType: int64
+		formatString: 0
+		lineageTag: 415807b4-b1ae-43a2-82da-017c0c778dfa
+		summarizeBy: none
+		sourceColumn: cliente id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre de la empresa cliente. Usado para filtrar y agrupar contratos y fichas por cliente.
+	column empresa
+		dataType: string
+		lineageTag: 475d4777-4258-4d0b-9988-7bf32c66919a
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_cliente_Table = public_Schema{[Name="fichasgest_cliente",Kind="Table"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(fichasgest_cliente_Table,{"direccion", "nombre_comercial", "telefono", "email", "site", "contacto1", "contacto2", "contacto3", "correo1", "correo2", "correo3"}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columnas quitadas",{{"id", "cliente id"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

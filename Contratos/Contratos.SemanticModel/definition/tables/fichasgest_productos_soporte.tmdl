@@ -1,0 +1,35 @@
+table fichasgest_productos_soporte
+	lineageTag: 2af2502c-741f-4fdd-abbf-aebac899949a
+
+	/// Identificador único del producto de soporte.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: d5c9f373-c3a5-4992-815b-f72c3f7d34e5
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del producto o servicio de soporte contratado (ej: Oracle DB, Linux, PostgreSQL).
+	column producto
+		dataType: string
+		lineageTag: e56212cf-83a6-40f2-bcd6-1c759ca5ec8d
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_productos_soporte = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_productos_soporte_Table = public_Schema{[Name="fichasgest_productos_soporte",Kind="Table"]}[Data]
+				in
+				    fichasgest_productos_soporte_Table
+
+	annotation PBI_ResultType = Table
+

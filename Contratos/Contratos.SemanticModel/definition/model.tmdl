@@ -1,0 +1,27 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-EC
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["fichasgest_ficha","fichasgest_contrato","fichasgest_contrato_producto_con_soporte","fichasgest_ficha_productos","auth_user","fichasgest_cliente","fichasgest_productos_soporte"]
+
+annotation PBI_RemovedChildren = [{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"ad839947-45b3-4547-a330-f16e9327da5e","fromColumnLocalLineageTag":"6d559903-2c52-4c60-8218-efcc6f06126d","toTableLocalLineageTag":"f31757d7-a4d8-42cb-a0c4-30d2f22b6a8c","toColumnLocalLineageTag":"415807b4-b1ae-43a2-82da-017c0c778dfa"}},"objectType":"Relationship"}]
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+ref table fichasgest_ficha
+ref table fichasgest_contrato
+ref table fichasgest_contrato_producto_con_soporte
+ref table fichasgest_ficha_productos
+ref table auth_user
+ref table fichasgest_cliente
+ref table fichasgest_productos_soporte
+ref table Calendario
+
+ref cultureInfo es-MX
+

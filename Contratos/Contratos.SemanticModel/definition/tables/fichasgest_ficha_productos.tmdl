@@ -1,0 +1,46 @@
+table fichasgest_ficha_productos
+	lineageTag: 06e6131a-996a-4b29-b772-26c28b883bff
+
+	/// Identificador único del registro de relación entre ficha y producto de soporte.
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: f7a3af23-1906-4730-b222-a5e577987eaf
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_ficha. Ficha a la que pertenece el producto.
+	column ficha_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c33670e-0e49-41fe-a10c-2ea31e687922
+		summarizeBy: none
+		sourceColumn: ficha_id
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Clave foránea hacia fichasgest_productos_soporte. Producto de soporte asociado a la ficha.
+	column productos_soporte_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 843ec0ee-e22d-458b-b3ac-69ceb6e5e869
+		summarizeBy: none
+		sourceColumn: productos_soporte_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fichasgest_ficha_productos = m
+		mode: import
+		source =
+				let
+				    Origen = Odbc.DataSource("dsn=PostgreSQL35W", [HierarchicalNavigation=true]),
+				    ticketsdb_Database = Origen{[Name="ticketsdb",Kind="Database"]}[Data],
+				    public_Schema = ticketsdb_Database{[Name="public",Kind="Schema"]}[Data],
+				    fichasgest_ficha_productos_Table = public_Schema{[Name="fichasgest_ficha_productos",Kind="Table"]}[Data]
+				in
+				    fichasgest_ficha_productos_Table
+
+	annotation PBI_ResultType = Table
+
